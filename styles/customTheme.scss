@@ -1,0 +1,9 @@
+$enable-shadows: true;
+$primary: #03D941;
+$secondary: white;
+
+.hero {
+    background: url('../public/images/hero.png');
+}
+
+@import "~bootstrap/scss/bootstrap";

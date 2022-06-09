@@ -1,0 +1,14 @@
+{
+    "DE": {
+        "Header": {
+            "buttonDE": "DE",
+            "buttonEN": "EN"
+        }
+    },
+    "EN": {
+        "Header": {
+            "buttonDE": "DE",
+            "buttonEN": "EN"
+        }
+    }
+}
