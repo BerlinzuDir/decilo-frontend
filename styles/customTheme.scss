@@ -1,0 +1,9 @@
+$enable-shadows: true;
+$primary: #03D941;
+$secondary: white;
+
+.hero {
+    background: linear-gradient(90deg, #12C989, #00F319);
+}
+
+@import "~bootstrap/scss/bootstrap";
