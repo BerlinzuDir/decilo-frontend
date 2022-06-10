@@ -38,7 +38,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                 {buttonDE}
               </a>
             </li>
-            <li className="ps-1 pe-1 pt-2 text-secondary">|</li>
+            <li className="ps-1 pe-1 pt-2 text-white">|</li>
             <li className="nav-item active">
               <a
                 type="button"
