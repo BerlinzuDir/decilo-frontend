@@ -1,7 +1,13 @@
-import '../styles/customTheme.scss'
+import "../styles/customTheme.scss";
+import {ComponentClass, FunctionComponent} from "react";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+interface AppProps {
+  Component: ComponentClass
+  pageProps: any
 }
 
-export default MyApp
+const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;

@@ -1,22 +1,44 @@
 {
-    "DE": {
-        "Header": {
-            "buttonDE": "DE",
-            "buttonEN": "EN"
-        },
-        "Heading": {
-            "heading": "DeCiLo - Decentralized City Logistics",
-            "sub_heading": "making the last mile efficient"
-        }
+  "DE": {
+    "Header": {
+      "buttonDE": "DE",
+      "buttonEN": "EN"
     },
-    "EN": {
-        "Header": {
-            "buttonDE": "DE",
-            "buttonEN": "EN"
-        },
-        "Heading": {
-            "heading": "DeCiLo - Decentralized City Logistics",
-            "sub_heading": "making the last mile efficient"
-        }
+    "Heading": {
+      "heading": "DeCiLo - Decentralized City Logistics",
+      "subHeading": "making the last mile efficient"
+    },
+    "Footer": {
+      "header": "Allgemeine Informationen",
+      "imprintLinkText": "Impressum",
+      "disclaimerLinkText": "Datenschutz",
+      "cookiePolicyLinkText": "Cookie Policy",
+      "contactLinkText": "Kontakt",
+      "githubLink": "https://github.com/BerlinzuDir",
+      "linkedinLink": "https://www.linkedin.com/company/decilo/",
+      "instagramLink": "https://www.instagram.com/decilo",
+      "facebookLink": "https://www.facebook.com/decilo"
     }
+  },
+  "EN": {
+    "Header": {
+      "buttonDE": "DE",
+      "buttonEN": "EN"
+    },
+    "Heading": {
+      "heading": "DeCiLo - Decentralized City Logistics",
+      "subHeading": "making the last mile efficient"
+    },
+    "Footer": {
+      "header": "General Information",
+      "imprintLinkText": "Imprint",
+      "disclaimerLinkText": "Disclaimer",
+      "cookiePolicyLinkText": "Cookie Policy",
+      "contactLinkText": "Contact",
+      "githubLink": "https://github.com/BerlinzuDir",
+      "linkedinLink": "https://www.linkedin.com/company/decilo/",
+      "instagramLink": "https://www.instagram.com/decilo",
+      "facebookLink": "https://www.facebook.com/decilo"
+    }
+  }
 }
