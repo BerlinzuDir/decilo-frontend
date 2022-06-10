@@ -3,12 +3,20 @@
         "Header": {
             "buttonDE": "DE",
             "buttonEN": "EN"
+        },
+        "Heading": {
+            "heading": "DeCiLo - Decentralized City Logistics",
+            "sub_heading": "making the last mile efficient"
         }
     },
     "EN": {
         "Header": {
             "buttonDE": "DE",
             "buttonEN": "EN"
+        },
+        "Heading": {
+            "heading": "DeCiLo - Decentralized City Logistics",
+            "sub_heading": "making the last mile efficient"
         }
     }
 }

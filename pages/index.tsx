@@ -15,9 +15,9 @@ export default function Home() {
 
   return (
     <div>
-      <Header content={content[language]} setLanguage={setLanguage}></Header>
+      <Header content={content[language]["Header"]} setLanguage={setLanguage}></Header>
       <Hero></Hero>
-      <Heading></Heading>
+      <Heading content={content[language]["Heading"]}></Heading>
       <Benefits></Benefits>
       <Contact></Contact>
       <FAQ></FAQ>
