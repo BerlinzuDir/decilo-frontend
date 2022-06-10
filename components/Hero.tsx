@@ -6,15 +6,17 @@ import fancyObject from '../public/images/fancy_object.png'
 
 export default function Hero() {
   return (
-    <div className='container-fluid hero p-0 m-0'>
+    <div className='container-fluid hero'>
       <div className="row">
-        <div className="col">
+        <div className="col-lg-1">
         </div>
-        <div className="col">
-          <img src={logo.src} className="img-fluid" height="100%" />
+        <div className="col align-self-center">
+          <img src={logo.src} className="img-fluid p-3 float-start vw-75"/>
         </div>
-        <div className="col">
-          <img src={fancyObject.src} className="img-fluid" height="100%" />
+        <div className="col align-self-end">
+          <img src={fancyObject.src} className="img-fluid pr-2 pt-5 float-end"/>
+        </div>
+        <div className="col-lg-1">
         </div>
       </div>
     </div>
