@@ -1,9 +1,44 @@
 $enable-shadows: true;
-$primary: #03D941;
+$primary: #03d941;
 $secondary: white;
 
 .hero {
-    background: linear-gradient(90deg, #12C989, #00F319);
+  background: linear-gradient(90deg, #12c989, #00f319);
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.footer-link-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-list-item {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link {
+}
+
+.footer-link:link {
+  text-decoration: none;
+  color: #505050;
+}
+.footer-link:visited {
+  text-decoration: none;
+  color: #505050;
+}
+.footer-link:hover {
+  text-decoration: none;
+  color: #494949;
+}
+.footer-link:active {
+  text-decoration: none;
+  color: #505050;
 }
 
 @import "~bootstrap/scss/bootstrap";
