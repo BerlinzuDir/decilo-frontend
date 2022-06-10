@@ -1,6 +1,21 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
-export default function Header({ content, setLanguage }) {
+export interface HeaderData {
+  buttonDE: string;
+  buttonEN: string;
+}
+
+interface HeaderProps {
+  buttonDE: string;
+  buttonEN: string;
+  setLanguage: CallableFunction;
+}
+
+const Header: FunctionComponent<HeaderProps> = ({
+  buttonDE,
+  buttonEN,
+  setLanguage,
+}) => {
   function setLanguageToDE() {
     setLanguage("DE");
   }
@@ -20,7 +35,7 @@ export default function Header({ content, setLanguage }) {
                 className="btn pe-0 text-secondary"
                 onClick={setLanguageToDE}
               >
-                {content["Header"]["buttonDE"]}
+                {buttonDE}
               </a>
             </li>
             <li className="ps-1 pe-1 pt-2 text-secondary">|</li>
@@ -30,7 +45,7 @@ export default function Header({ content, setLanguage }) {
                 className="btn ps-0 text-secondary"
                 onClick={setLanguageToEN}
               >
-                {content["Header"]["buttonEN"]}
+                {buttonEN}
               </a>
             </li>
           </ul>
@@ -38,4 +53,5 @@ export default function Header({ content, setLanguage }) {
       </nav>
     </div>
   );
-}
+};
+export default Header;

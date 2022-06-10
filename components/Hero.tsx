@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import logo from "../public/images/logo_weiß_vertikal.png";
 import fancyObject from "../public/images/fancy_object.png";
 
@@ -9,14 +8,14 @@ export default function Hero() {
       <div className="row">
         <div className="col-lg-1"></div>
         <div className="col align-self-center">
-          <Image
+          <img
             src={logo.src}
             className="img-fluid p-3 float-start"
             alt="DeCiLo Logo"
           />
         </div>
         <div className="col align-self-end">
-          <Image
+          <img
             src={fancyObject.src}
             className="img-fluid pr-2 pt-5 float-end"
             alt=""

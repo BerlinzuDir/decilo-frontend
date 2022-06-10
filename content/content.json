@@ -4,6 +4,10 @@
       "buttonDE": "DE",
       "buttonEN": "EN"
     },
+    "Heading": {
+      "heading": "DeCiLo - Decentralized City Logistics",
+      "subHeading": "making the last mile efficient"
+    },
     "Footer": {
       "header": "Allgemeine Informationen",
       "imprintLinkText": "Impressum",
@@ -20,6 +24,10 @@
     "Header": {
       "buttonDE": "DE",
       "buttonEN": "EN"
+    },
+    "Heading": {
+      "heading": "DeCiLo - Decentralized City Logistics",
+      "subHeading": "making the last mile efficient"
     },
     "Footer": {
       "header": "General Information",

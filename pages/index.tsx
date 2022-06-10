@@ -1,24 +1,35 @@
 import React, { useState, FunctionComponent } from "react";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header, {HeaderData} from "../components/Header";
+import Footer, {FooterData} from "../components/Footer";
 import Hero from "../components/Hero";
-import Heading from "../components/Heading";
+import Heading, {HeadingData} from "../components/Heading";
 import Benefits from "../components/Benefits";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 
 import content from "../content/content.json";
 
+interface LocalizedContent {
+    Header: HeaderData
+    Heading: HeadingData
+    Footer: FooterData
+}
+
+type Language = 'EN' | 'DE'
+
 const Home: FunctionComponent = () => {
-  const [language, setLanguage] = useState("DE");
-  const localizedContent = content[language];
+  const [language, setLanguage] = useState<Language>("DE");
+  const localizedContent: LocalizedContent = content[language];
 
   return (
     <div>
-      <Header content={localizedContent} setLanguage={setLanguage}></Header>
+      <Header
+        {...localizedContent["Header"]}
+        setLanguage={setLanguage}
+      ></Header>
       <Hero></Hero>
-      <Heading></Heading>
+      <Heading {...localizedContent["Heading"]}></Heading>
       <Benefits></Benefits>
       <Contact></Contact>
       <FAQ></FAQ>

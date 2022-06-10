@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import Link from "next/link";
 import { Instagram, Facebook, Linkedin, Github } from "react-bootstrap-icons";
 
-interface FooterData {
+export interface FooterData {
   header: string;
   imprintLinkText: string;
   disclaimerLinkText: string;
