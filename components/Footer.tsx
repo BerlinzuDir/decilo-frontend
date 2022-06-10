@@ -27,8 +27,9 @@ const Footer: FunctionComponent<FooterData> = ({
 }) => {
   return (
     <div className="container-fluid h-100 footer">
-      <div className="row p-5">
-        <div className="col-12 col-sm-6">
+      <div className="row">
+        <div className="col-lg-1"></div>
+        <div className="col-12 col-sm-5 p-4">
           <h5>{header}</h5>
           <ul className="footer-link-list">
             <FooterLink linkText={imprintLinkText} linkURL="/" />
