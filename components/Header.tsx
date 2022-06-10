@@ -42,7 +42,7 @@ const Header: FunctionComponent<HeaderProps> = ({
             <li className="nav-item active">
               <a
                 type="button"
-                className="btn ps-0 text-secondary"
+                className="btn ps-0 text-white"
                 onClick={setLanguageToEN}
               >
                 {buttonEN}
