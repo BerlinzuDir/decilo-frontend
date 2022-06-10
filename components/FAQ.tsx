@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, FunctionComponent } from "react";
 
-export default function FAQ() {
-  const [clickedButton, setClickedButton] = useState([]);
+export interface faqData {
 
-  const buttonHandler = (event) => {
+}
+
+const FAQ: FunctionComponent<faqData> = () => {
+  var array:string[] = []
+  const [clickedButton, setClickedButton] = useState(array);
+
+  const buttonHandler = (event: any) => {
     event.preventDefault();
-
-    if (!clickedButton.includes(event.currentTarget.name)) {
-      clickedButton.push(event.currentTarget.name)
-      setClickedButton(clickedButton)
+    console.log(clickedButton)
+    console.log(clickedButton.indexOf("button1"))
+    console.log(clickedButton.indexOf("button1") > -1)
+    if (clickedButton.indexOf(event.currentTarget.name) > -1 ) {
+      clickedButton.forEach((element, index)=>{
+        if(element==event.currentTarget.name) delete clickedButton[index];
+     });
     }
-
+    else {
+      clickedButton.push(event.currentTarget.name)
+    }
   };
 
   return (
@@ -28,13 +38,13 @@ export default function FAQ() {
             <button className="btn" name="button1" type="button" onClick={buttonHandler}>
               <p className='text text-dark ps-3 float-start fs-5'> Wie kann ich mich beteiligen?</p> <p className='float-end text-primary fw-bold fs-1'>+</p>
             </button>
-            <p className="text"> {clickedButton.includes("button1") ? `This is the text"` : ""} </p>
+            <p className="text"> {clickedButton.indexOf("button1") > -1 ? "This is the text" : ""} </p>
           </div>
           <div className="row">
             <button className="btn" name="button2" type="button" onClick={buttonHandler}>
               <p className='text text-dark ps-3 float-start fs-5'> blablabla?</p> <p className='float-end text-primary fw-bold fs-1'>+</p>
             </button>
-            <p className="text"> {clickedButton.includes("button1") ? `This is the text"` : ""} </p>
+            <p className="text"> {clickedButton.indexOf("button2") > -1  ? `This is the text"` : ""} </p>
           </div>
         </div>
         <div className="col-lg-1">
@@ -43,3 +53,5 @@ export default function FAQ() {
     </div>
   )
 }
+
+export default FAQ;
