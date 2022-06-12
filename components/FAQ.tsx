@@ -1,25 +1,21 @@
 import React, { useState, FunctionComponent } from "react";
+import { TRUE } from "sass";
 
-export interface faqData {
+export interface FAQData {
 
 }
 
-const FAQ: FunctionComponent<faqData> = () => {
-  var array:string[] = []
-  const [clickedButton, setClickedButton] = useState(array);
+const FAQ: FunctionComponent<FAQData> = ({ header, FAQs }) => {
+  const [clickedButton1, setClickedButton1] = useState(false);
+  const [clickedButton2, setClickedButton2] = useState(false);
+
 
   const buttonHandler = (event: any) => {
-    event.preventDefault();
-    console.log(clickedButton)
-    console.log(clickedButton.indexOf("button1"))
-    console.log(clickedButton.indexOf("button1") > -1)
-    if (clickedButton.indexOf(event.currentTarget.name) > -1 ) {
-      clickedButton.forEach((element, index)=>{
-        if(element==event.currentTarget.name) delete clickedButton[index];
-     });
+    if (event.currentTarget.name === "button1") {
+      { clickedButton1 ? setClickedButton1(false) : setClickedButton1(true) }
     }
-    else {
-      clickedButton.push(event.currentTarget.name)
+    else if (event.currentTarget.name === "button2") {
+      { clickedButton2 ? setClickedButton2(false) : setClickedButton2(true) }
     }
   };
 
@@ -31,20 +27,20 @@ const FAQ: FunctionComponent<faqData> = () => {
         <div className="col">
           <div className="row p-3 pb-3">
             <p className='header text float-start text-dark fs-4'>
-              Erste Antworten
+              {header}
             </p>
           </div>
           <div className="row">
-            <button className="btn" name="button1" type="button" onClick={buttonHandler}>
+            <button className="btn btn-primary-outline" name="button1" type="button" onClick={buttonHandler}>
               <p className='text text-dark ps-3 float-start fs-5'> Wie kann ich mich beteiligen?</p> <p className='float-end text-primary fw-bold fs-1'>+</p>
             </button>
-            <p className="text"> {clickedButton.indexOf("button1") > -1 ? "This is the text" : ""} </p>
+            <p className="text"> {clickedButton1 ? "This is the text" : ""} </p>
           </div>
           <div className="row">
             <button className="btn" name="button2" type="button" onClick={buttonHandler}>
               <p className='text text-dark ps-3 float-start fs-5'> blablabla?</p> <p className='float-end text-primary fw-bold fs-1'>+</p>
             </button>
-            <p className="text"> {clickedButton.indexOf("button2") > -1  ? `This is the text"` : ""} </p>
+            <p className="text"> {clickedButton2 ? `This is the text"` : ""} </p>
           </div>
         </div>
         <div className="col-lg-1">
@@ -53,5 +49,22 @@ const FAQ: FunctionComponent<faqData> = () => {
     </div>
   )
 }
+
+interface faqBulletData {
+
+}
+
+const faqBullet: FunctionComponent<faqBulletData> = () => {
+  const [clickedButton, setClickedButton] = useState(false);
+  const buttonHandler = (event: any) => { clickedButton ? setClickedButton(false) : setClickedButton(true) }
+  return (
+    <div className="row">
+      <button className="btn btn-primary-outline" name="button1" type="button" onClick={buttonHandler}>
+        <p className='text text-dark ps-3 float-start fs-5'> Wie kann ich mich beteiligen?</p> <p className='float-end text-primary fw-bold fs-1'>+</p>
+      </button>
+      <p className="text"> {clickedButton ? "This is the text" : ""} </p>
+    </div>
+  );
+};
 
 export default FAQ;

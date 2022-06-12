@@ -1,11 +1,11 @@
 import React, { useState, FunctionComponent } from "react";
 
 import Header, {HeaderData} from "../components/Header";
+import FAQ, {FAQData} from "../components/FAQ";
 import Footer, {FooterData} from "../components/Footer";
 import Hero from "../components/Hero";
 import Heading, {HeadingData} from "../components/Heading";
 import Benefits from "../components/Benefits";
-import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 
 import content from "../content/content.json";
@@ -13,6 +13,7 @@ import content from "../content/content.json";
 interface LocalizedContent {
     Header: HeaderData
     Heading: HeadingData
+    FAQ: FAQData
     Footer: FooterData
 }
 
@@ -32,7 +33,7 @@ const Home: FunctionComponent = () => {
       <Heading {...localizedContent["Heading"]}></Heading>
       <Benefits></Benefits>
       <Contact></Contact>
-      <FAQ></FAQ>
+      <FAQ {...localizedContent["FAQ"]}></FAQ>
       <Footer {...localizedContent["Footer"]} />
     </div>
   );

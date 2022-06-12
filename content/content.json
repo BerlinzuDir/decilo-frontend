@@ -8,6 +8,15 @@
       "heading": "DeCiLo - Decentralized City Logistics",
       "subHeading": "making the last mile efficient"
     },
+    "FAQ": {
+      "header": "Erste Antworten",
+      "FAQs": [
+        {
+          "question": "Wie kann ich mich beteiligen?",
+          "answer": "blabl ablablab lablabl ablabla blablab lablab lablabla blabl ablabla blabla blablabl ablablabla"
+        }
+      ]
+    },
     "Footer": {
       "header": "Allgemeine Informationen",
       "imprintLinkText": "Impressum",
@@ -28,6 +37,15 @@
     "Heading": {
       "heading": "DeCiLo - Decentralized City Logistics",
       "subHeading": "making the last mile efficient"
+    },
+    "FAQ": {
+      "header": "Erste Antworten",
+      "FAQs": [
+        {
+          "question": "How to collaborate?",
+          "answer": "blabl ablablab lablabl ablabla blablab lablab lablabla blabl ablabla blabla blablabl ablablabla"
+        }
+      ]
     },
     "Footer": {
       "header": "General Information",
