@@ -41,10 +41,5 @@ $dark: #505050;
   color: #505050;
 }
 
-.btn:focus, .btn:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
+@import "./FAQ.scss";
 @import "~bootstrap/scss/bootstrap";
-
