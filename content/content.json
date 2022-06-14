@@ -18,6 +18,31 @@
       "linkedinLink": "https://www.linkedin.com/company/decilo/",
       "instagramLink": "https://www.instagram.com/decilo",
       "facebookLink": "https://www.facebook.com/decilo"
+    },
+    "Benefits": {
+      "heading": "WELCHES PROBLEM LÖST UNSER PRODUKT?",
+      "benefits": [
+        {
+          "heading": "REDUKTION DER KOSTEN",
+          "text": "50% der gesamten Transport-Kosten entstehen auf der „letzten Meile“.",
+          "iconSource": "/icons/Icon_Kostenreduktion.png"
+        },
+        {
+          "heading": "TRANSPARENTE VERGÜTUNG",
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
+          "iconSource": "/icons/icon_verguetung.png"
+        },
+        {
+          "heading": "NETZWERK SYNERGIEN",
+          "text": "Hohe Elastizät durch Netzwerk-Synergien …\u2028Lorem ipsum dolor sit amet, consetetur ",
+          "iconSource": "/icons/Vision_Icon_gruen.png"
+        },
+        {
+          "heading": "PLUG & PLAY",
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
+          "iconSource": "/icons/Icon_Plug-and-play.png"
+        }
+      ]
     }
   },
   "EN": {
@@ -39,6 +64,31 @@
       "linkedinLink": "https://www.linkedin.com/company/decilo/",
       "instagramLink": "https://www.instagram.com/decilo",
       "facebookLink": "https://www.facebook.com/decilo"
+    },
+    "Benefits": {
+      "heading": "WELCHES PROBLEM LÖST UNSER PRODUKT?",
+      "benefits": [
+        {
+          "heading": "REDUKTION DER KOSTEN",
+          "text": "50% der gesamten Transport-Kosten entstehen auf der „letzten Meile“.",
+          "iconSource": "/icons/Icon_Kostenreduktion.png"
+        },
+        {
+          "heading": "TRANSPARENTE VERGÜTUNG",
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
+          "iconSource": "/icons/icon_verguetung.png"
+        },
+        {
+          "heading": "NETZWERK SYNERGIEN",
+          "text": "Hohe Elastizät durch Netzwerk-Synergien …\u2028Lorem ipsum dolor sit amet, consetetur ",
+          "iconSource": "/icons/Vision_Icon_gruen.png"
+        },
+        {
+          "heading": "PLUG & PLAY",
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
+          "iconSource": "/icons/Icon_Plug-and-play.png"
+        }
+      ]
     }
   }
 }
