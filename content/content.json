@@ -8,6 +8,28 @@
       "heading": "DeCiLo - Decentralized City Logistics",
       "subHeading": "making the last mile efficient"
     },
+    "contactForm": {
+      "header": "Kontaktaufnahme",
+      "formFields": [
+        {
+          "name": "Name",
+          "type": "text"
+        },
+        {
+          "name": "Email Adresse",
+          "type": "email"
+        },
+        {
+          "name": "Nachricht",
+          "type": "textArea"
+        }
+      ],
+      "submitButton": "Absenden",
+      "successPage": {
+        "header": "Danke für deine Nachricht!",
+        "text": "Wir melden uns in kürze."
+      }
+    },
     "Footer": {
       "header": "Allgemeine Informationen",
       "imprintLinkText": "Impressum",
@@ -53,6 +75,28 @@
     "Heading": {
       "heading": "DeCiLo - Decentralized City Logistics",
       "subHeading": "making the last mile efficient"
+    },
+    "contactForm": {
+      "header": "Get in touch",
+      "formFields": [
+        {
+          "name": "Name",
+          "type": "text"
+        },
+        {
+          "name": "Email Address",
+          "type": "email"
+        },
+        {
+          "name": "Message",
+          "type": "textArea"
+        }
+      ],
+      "submitButton": "Submit",
+      "successPage": {
+        "header": "Thank you for your submission!",
+        "text": "We will get back to you soon."
+      }
     },
     "Footer": {
       "header": "General Information",
