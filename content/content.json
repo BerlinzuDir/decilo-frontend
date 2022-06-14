@@ -53,6 +53,31 @@
       "linkedinLink": "https://www.linkedin.com/company/decilo/",
       "instagramLink": "https://www.instagram.com/decilo",
       "facebookLink": "https://www.facebook.com/decilo"
+    },
+    "Benefits": {
+      "heading": "DIE VORTEILE DER DECILO PLATTFORM",
+      "benefits": [
+        {
+          "heading": "REDUKTION DER KOSTEN",
+          "text": "Durch kollaborativ-optimierte Tourenoptimierung",
+          "iconSource": "/icons/Icon_Kostenreduktion.svg"
+        },
+        {
+          "heading": "HOHE ELASTIZITÄT",
+          "text": "Durch gezielt-optimierte Nutzung \u2028von Synergieeffekten",
+          "iconSource": "/icons/Vision_Icon_gruen.svg"
+        },
+        {
+          "heading": "TRANSPARENTE & FAIRE VERGÜTUNG",
+          "text": "Durch integriertes Revenue Share Abrechnungsmodell",
+          "iconSource": "/icons/icon_verguetung.svg"
+        },
+        {
+          "heading": "EINFACHE & FLEXIBLE NUTZUNG",
+          "text": "Mit jeder Touren-Software kompatibel \u2028& transparentes Abo-Modell ",
+          "iconSource": "/icons/Icon_Plug-and-play.svg"
+        }
+      ]
     }
   },
   "EN": {
@@ -109,6 +134,31 @@
       "linkedinLink": "https://www.linkedin.com/company/decilo/",
       "instagramLink": "https://www.instagram.com/decilo",
       "facebookLink": "https://www.facebook.com/decilo"
+    },
+    "Benefits": {
+      "heading": "BENEFITS OF THE DECILO PLATFORM",
+      "benefits": [
+        {
+          "heading": "COST REDUCTION",
+          "text": "Through collaborative route optimization.",
+          "iconSource": "/icons/Icon_Kostenreduktion.svg"
+        },
+        {
+          "heading": "HIGH ELASTICITY",
+          "text": "Through targeted and optimized use of synergy effects",
+          "iconSource": "/icons/Vision_Icon_gruen.svg"
+        },
+        {
+          "heading": "TRANSPARENT & FAIR REMUNERATION",
+          "text": "Through our integrated revenue share billing model",
+          "iconSource": "/icons/icon_verguetung.svg"
+        },
+        {
+          "heading": "SIMPLE & FLEXIBLE USE",
+          "text": "Compatible with any tour software & transparent subscription model",
+          "iconSource": "/icons/Icon_Plug-and-play.svg"
+        }
+      ]
     }
   }
 }
