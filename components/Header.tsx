@@ -25,8 +25,8 @@ const Header: FunctionComponent<HeaderProps> = ({
   }
 
   return (
-    <div className="container">
-      <nav className="navbar bg-transparent navbar-expand fixed-top">
+    <div className="container-flui">
+      <nav className="navbar bg-transparent navbar-expand sticky-top">
         <div className="container-fluid">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item active">
