@@ -1,17 +1,17 @@
 import React, { FunctionComponent } from "react";
-import {Language} from "../pages/index"
+import { Language } from "../pages/index"
 
 
 export interface ContactFormData {
   header: string,
-  formFields: Array<Record<string,string>>,
+  formFields: Array<Record<string, string>>,
   submitButton: string,
   successPage: Record<string, string>,
 }
 
 interface ContactFormProps {
   header: string,
-  formFields: Array<Record<string,string>>,
+  formFields: Array<Record<string, string>>,
   submitButton: string,
   successPage: Record<string, string>,
   language: Language;
@@ -36,18 +36,9 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
                 Don not fill this out if you are human: <input name="bot-field" />
               </label>
             </p>
-            <div className="mb-3">
-              <label className="form-label text-dark" htmlFor="name">Name</label>
-              <input className="form-control" id="name" type="text" placeholder="Name" required />
-            </div>
-            <div className="mb-3">
-              <label className="form-label text-dark" htmlFor="emailAddress">Email Address</label>
-              <input className="form-control" id="emailAddress" type="email" placeholder="Email Address" required />
-            </div>
-            <div className="mb-3">
-              <label className="form-label text-dark" htmlFor="message">Message</label>
-              <textarea className="form-control" id="message" placeholder="Message" style={{ height: "10rem" }} required></textarea>
-            </div>
+            {formFields.map(fieldData => (
+              <FormField key={fieldData["name"]} formField={fieldData} />
+            ))}
             <button className="btn btn-primary text-white" type="submit">{submitButton}</button>
           </form>
         </div>
@@ -57,12 +48,38 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
   )
 };
 
-export interface ContactFieldData {
+interface FormFieldData {
   formField: Record<string, string>
 }
 
-const ContactField: FunctionComponent<ContactFieldData> = ( {formField} ) => {
-  return <div></div>
+const FormField: FunctionComponent<FormFieldData> = ({ formField }) => {
+  return (
+    <div className="mb-3">
+      <label className="form-label text-dark" htmlFor={formField["name"]}>{formField["name"]}</label>
+      <Input name={formField["name"]} type={formField["type"]} />
+    </div>
+  )
+}
+
+interface InputData {
+  name: string,
+  type: string
+}
+
+const Input: FunctionComponent<InputData> = ({ name, type }) => {
+  if (type == "text" || type == "email") {
+    return (
+      <input className="form-control" id={name} type={type} placeholder={name} required />
+    )
+  }
+  else if (type == "textArea") {
+    return (
+      <textarea className="form-control" id={name} placeholder={name} style={{ height: "10rem" }} required />
+    )
+  }
+  else {
+    return null
+  }
 }
 
 export default ContactForm;
