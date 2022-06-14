@@ -7,17 +7,17 @@ export default function Hero() {
     <div className="container-fluid hero">
       <div className="row">
         <div className="col-lg-1"></div>
-        <div className="col align-self-center">
+        <div className="col align-self-center p-3">
           <img
             src={logo.src}
-            className="img-fluid p-3 float-start"
+            className="img-fluid float-start"
             alt="DeCiLo Logo"
           />
         </div>
-        <div className="col align-self-end">
+        <div className="col align-self-end p-1">
           <img
             src={fancyObject.src}
-            className="img-fluid pr-2 pt-5 float-end"
+            className="img-fluid float-end"
             alt=""
           />
         </div>
