@@ -10,14 +10,14 @@ export default function Hero() {
         <div className="col align-self-center">
           <img
             src={logo.src}
-            className="img-fluid p-3 float-start"
+            className="img-fluid float-start"
             alt="DeCiLo Logo"
           />
         </div>
-        <div className="col align-self-end">
+        <div className="col align-self-end p-1">
           <img
             src={fancyObject.src}
-            className="img-fluid pr-2 pt-5 float-end"
+            className="img-fluid float-end"
             alt=""
           />
         </div>
