@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="container-fluid hero">
       <div className="row">
         <div className="col-lg-1"></div>
-        <div className="col align-self-center">
+        <div className="col align-self-center p-3">
           <img
             src={logo.src}
             className="img-fluid float-start"
