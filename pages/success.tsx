@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react";
 import { useRouter } from 'next/router'
 import content from "../content/content.json";
+import {Language} from "./index"
 
 type SuccessPageContent = Record<string, string>
-type Language = "EN" | "DE"
 
 const Success: FunctionComponent = () => {
     const router = useRouter()
