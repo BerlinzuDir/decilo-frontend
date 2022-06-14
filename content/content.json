@@ -8,6 +8,19 @@
       "heading": "DeCiLo - Decentralized City Logistics",
       "subHeading": "making the last mile efficient"
     },
+    "FAQ": {
+      "header": "Erste Antworten",
+      "FAQs": [
+        {
+          "question": "Wie kann ich mich beteiligen?",
+          "answer": "blabl ablablab lablabl ablabla blablab lablab lablabla blabl ablabla blabla blablabl ablablabla"
+        },
+        {
+          "question": "Weitere Frage...",
+          "answer": "blabl ablablab lablabl ablabla blablab lablab lablabla blabl ablabla blabla blablabl ablablabla"
+        }
+      ]
+    },
     "contactForm": {
       "header": "Kontaktaufnahme",
       "formFields": [
@@ -50,6 +63,19 @@
     "Heading": {
       "heading": "DeCiLo - Decentralized City Logistics",
       "subHeading": "making the last mile efficient"
+    },
+    "FAQ": {
+      "header": "Erste Antworten",
+      "FAQs": [
+        {
+          "question": "How to collaborate?",
+          "answer": "blabl ablablab lablabl ablabla blablab lablab lablabla blabl ablabla blabla blablabl ablablabla"
+        },
+        {
+          "question": "Further question...",
+          "answer": "blabl ablablab lablabl ablabla blablab lablab lablabla blabl ablabla blabla blablabl ablablabla"
+        }
+      ]
     },
     "contactForm": {
       "header": "Get in touch",
