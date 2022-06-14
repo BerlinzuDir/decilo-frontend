@@ -31,11 +31,15 @@ const Home: FunctionComponent = () => {
         setLanguage={setLanguage}
       ></Header>
       <Hero></Hero>
-      <Heading {...localizedContent["Heading"]}></Heading>
-      <Benefits {...localizedContent["Benefits"]}></Benefits>
-      <ContactForm {...localizedContent["contactForm"]} language={language} />
-      <FAQ></FAQ>
-      <Footer {...localizedContent["Footer"]} />
+        <div className={'container-sm'}>
+
+            <Heading {...localizedContent["Heading"]}></Heading>
+            <Benefits {...localizedContent["Benefits"]}></Benefits>
+            <ContactForm {...localizedContent["contactForm"]} language={language} />
+            <FAQ></FAQ>
+
+        </div>
+        <Footer {...localizedContent["Footer"]} />
     </div>
   );
 };

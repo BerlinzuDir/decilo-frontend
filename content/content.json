@@ -42,27 +42,27 @@
       "facebookLink": "https://www.facebook.com/decilo"
     },
     "Benefits": {
-      "heading": "WELCHES PROBLEM LÖST UNSER PRODUKT?",
+      "heading": "DIE VORTEILE DER DECILO PLATTFORM",
       "benefits": [
         {
           "heading": "REDUKTION DER KOSTEN",
-          "text": "50% der gesamten Transport-Kosten entstehen auf der „letzten Meile“.",
-          "iconSource": "/icons/Icon_Kostenreduktion.png"
+          "text": "Durch kollaborativ-optimierte Tourenoptimierung",
+          "iconSource": "/icons/Icon_Kostenreduktion.svg"
         },
         {
-          "heading": "TRANSPARENTE VERGÜTUNG",
-          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
-          "iconSource": "/icons/icon_verguetung.png"
+          "heading": "HOHE ELASTIZITÄT",
+          "text": "Durch gezielt-optimierte Nutzung \u2028von Synergieeffekten",
+          "iconSource": "/icons/Vision_Icon_gruen.svg"
         },
         {
-          "heading": "NETZWERK SYNERGIEN",
-          "text": "Hohe Elastizät durch Netzwerk-Synergien …\u2028Lorem ipsum dolor sit amet, consetetur ",
-          "iconSource": "/icons/Vision_Icon_gruen.png"
+          "heading": "TRANSPARENTE & FAIRE VERGÜTUNG",
+          "text": "Durch integriertes Revenue Share Abrechnungsmodell",
+          "iconSource": "/icons/icon_verguetung.svg"
         },
         {
-          "heading": "PLUG & PLAY",
-          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
-          "iconSource": "/icons/Icon_Plug-and-play.png"
+          "heading": "EINFACHE & FLEXIBLE NUTZUNG",
+          "text": "Mit jeder Touren-Software kompatibel \u2028& transparentes Abo-Modell ",
+          "iconSource": "/icons/Icon_Plug-and-play.svg"
         }
       ]
     }
@@ -115,22 +115,22 @@
         {
           "heading": "REDUKTION DER KOSTEN",
           "text": "50% der gesamten Transport-Kosten entstehen auf der „letzten Meile“.",
-          "iconSource": "/icons/Icon_Kostenreduktion.png"
+          "iconSource": "/icons/Icon_Kostenreduktion.svg"
         },
         {
-          "heading": "TRANSPARENTE VERGÜTUNG",
+          "heading": "TRANSPARENTE & FAIRE VERGÜTUNG",
           "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
-          "iconSource": "/icons/icon_verguetung.png"
+          "iconSource": "/icons/icon_verguetung.svg"
         },
         {
           "heading": "NETZWERK SYNERGIEN",
           "text": "Hohe Elastizät durch Netzwerk-Synergien …\u2028Lorem ipsum dolor sit amet, consetetur ",
-          "iconSource": "/icons/Vision_Icon_gruen.png"
+          "iconSource": "/icons/Vision_Icon_gruen.svg"
         },
         {
           "heading": "PLUG & PLAY",
           "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
-          "iconSource": "/icons/Icon_Plug-and-play.png"
+          "iconSource": "/icons/Icon_Plug-and-play.svg"
         }
       ]
     }
