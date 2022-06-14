@@ -15,11 +15,7 @@ export default function Hero() {
           />
         </div>
         <div className="col align-self-end p-1">
-          <img
-            src={fancyObject.src}
-            className="img-fluid float-end"
-            alt=""
-          />
+          <img src={fancyObject.src} className="img-fluid float-end" alt="" />
         </div>
         <div className="col-lg-1"></div>
       </div>
