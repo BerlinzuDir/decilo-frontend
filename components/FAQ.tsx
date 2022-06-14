@@ -1,13 +1,14 @@
 import React, { useState, FunctionComponent } from "react";
+import * as R from 'ramda'
 
-export interface FAQData {
+export type FAQData = {
   header: string,
-  FAQs: Array<Record<string, string>>
+  FAQs: ReadonlyArray<FAQBulletData>
 }
 
 const FAQ: FunctionComponent<FAQData> = ({ header, FAQs }) => {
   return (
-    <div className='container-fluid pt-5'>
+    <div className='container-fluid pt-5 px-4'>
       <div className="row">
         <div className="col-lg-1">
         </div>
@@ -17,9 +18,7 @@ const FAQ: FunctionComponent<FAQData> = ({ header, FAQs }) => {
               {header}
             </p>
           </div>
-          {FAQs.map(faq => (
-            <FAQBullet faq={faq} />
-          ))}
+          {R.map(renderFaqBullet, FAQs)}
         </div>
         <div className="col-lg-1">
         </div>
@@ -29,21 +28,38 @@ const FAQ: FunctionComponent<FAQData> = ({ header, FAQs }) => {
 }
 
 interface FAQBulletData {
-  faq: Record<string, string>
+  question: string
+    answer: string
 }
 
-const FAQBullet: FunctionComponent<FAQBulletData> = ({ faq }) => {
+const renderFaqBullet = ({answer, question}: FAQBulletData) => <FAQBullet key={question} question={question} answer={answer}/>
+
+
+const FAQBullet: FunctionComponent<FAQBulletData> = ({ question, answer }) => {
   const [clickedButton, setClickedButton] = useState(false);
   const buttonHandler = (event: any) => {
-    clickedButton ? setClickedButton(false) : setClickedButton(true)
+      event.preventDefault()
+      clickedButton ? setClickedButton(false) : setClickedButton(true)
   }
   return (
     <div className="row">
       <button className="btn" name="button1" type="button" onClick={buttonHandler}>
-        <p className='text text-dark float-start'> {faq["question"]} </p> <p className='text text-primary float-end fw-bold fs-1'>+</p>
+          <div className="row">
+              <div className={'col-10'}>
+                  <p className='text text-dark float-start pt-3'> {question} </p>
+              </div>
+              <div className={'col-2'}>
+                  <p className='text text-primary float-end fw-bold fs-1'>+</p>
+              </div>
+          </div>
       </button>
-      <p className="text ps-3"> {clickedButton ? faq["answer"] : ""} </p>
-      <div className="hr"></div>
+        <div className={'row'}>
+            <p className="text ps-3"> {clickedButton ? answer : ""} </p>
+        </div>
+
+        <div className={'row ps-3'}>
+            <hr className={''}/>
+        </div>
     </div>
   )
 }
