@@ -12,7 +12,6 @@ const Success: FunctionComponent = () => {
     if(!lang) {
         return <></>;
       }
-    console.log(lang)
     const successpageContent: SuccessPageContent = content[lang]["contactForm"]["successPage"]
     return (
         <div className="container-fluid p-5">

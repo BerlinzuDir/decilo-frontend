@@ -1,5 +1,6 @@
-import React, { FunctionComponent } from "react";
-import { Language } from "../pages/index"
+import React, { FunctionComponent, SyntheticEvent } from "react";
+import { Language } from "../pages"
+import {useRouter} from "next/router";
 
 
 export interface ContactFormData {
@@ -23,14 +24,20 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
   submitButton,
   language,
 }) => {
-  const successAction: string = "/success?lang=" + language
+
+  const router = useRouter()
+
+  const successAction = async (e: SyntheticEvent<EventTarget>) => {
+    e.preventDefault()
+    await router.push("/success?lang=" + language)
+  }
   return (
     <div className="container-fluid pt-5">
       <div className="row">
         <div className="col-lg-1"></div>
         <div className="col-lg-6 align-self-center p-4">
           <h5 className="text-dark">{header}</h5>
-          <form id="contactForm needs-validation" data-netlify="true" action={successAction} method="POST" netlify-honeypot="bot-field">
+          <form id="contactForm needs-validation" data-netlify="true" method="POST" netlify-honeypot="bot-field">
             <p className="visually-hidden">
               <label>
                 Don not fill this out if you are human: <input name="bot-field" />
@@ -39,7 +46,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
             {formFields.map(fieldData => (
               <FormField key={fieldData["name"]} formField={fieldData} />
             ))}
-            <button className="btn btn-primary text-white" type="submit">{submitButton}</button>
+            <button className="btn btn-primary text-white" type="submit" onClick={successAction}>{submitButton}</button>
           </form>
         </div>
         <div className="col-lg-1"></div>
