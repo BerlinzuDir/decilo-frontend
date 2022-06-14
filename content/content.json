@@ -136,26 +136,26 @@
       "facebookLink": "https://www.facebook.com/decilo"
     },
     "Benefits": {
-      "heading": "WELCHES PROBLEM LÖST UNSER PRODUKT?",
+      "heading": "BENEFITS OF THE DECILO PLATFORM",
       "benefits": [
         {
-          "heading": "REDUKTION DER KOSTEN",
-          "text": "50% der gesamten Transport-Kosten entstehen auf der „letzten Meile“.",
+          "heading": "COST REDUCTION",
+          "text": "Through collaborative route optimization.",
           "iconSource": "/icons/Icon_Kostenreduktion.svg"
         },
         {
-          "heading": "TRANSPARENTE & FAIRE VERGÜTUNG",
-          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
-          "iconSource": "/icons/icon_verguetung.svg"
-        },
-        {
-          "heading": "NETZWERK SYNERGIEN",
-          "text": "Hohe Elastizät durch Netzwerk-Synergien …\u2028Lorem ipsum dolor sit amet, consetetur ",
+          "heading": "HIGH ELASTICITY",
+          "text": "Through targeted and optimized use of synergy effects",
           "iconSource": "/icons/Vision_Icon_gruen.svg"
         },
         {
-          "heading": "PLUG & PLAY",
-          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam no-numy eirmod.",
+          "heading": "TRANSPARENT & FAIR REMUNERATION",
+          "text": "Through our integrated revenue share billing model",
+          "iconSource": "/icons/icon_verguetung.svg"
+        },
+        {
+          "heading": "SIMPLE & FLEXIBLE USE",
+          "text": "Compatible with any tour software & transparent subscription model",
           "iconSource": "/icons/Icon_Plug-and-play.svg"
         }
       ]

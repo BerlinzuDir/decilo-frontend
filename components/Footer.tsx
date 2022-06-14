@@ -27,35 +27,35 @@ const Footer: FunctionComponent<FooterData> = ({
 }) => {
   return (
     <div className="container-fluid h-100 footer">
-      <div className={'container-sm'}>
-      <div className="row">
-        <div className="col-lg-1"></div>
-        <div className="col-12 col-sm-5 p-4">
-          <h5>{header}</h5>
-          <ul className="footer-link-list">
-            <FooterLink linkText={imprintLinkText} linkURL="/" />
-            <FooterLink linkText={disclaimerLinkText} linkURL="/" />
-            <FooterLink linkText={cookiePolicyLinkText} linkURL="/" />
-            <FooterLink linkText={contactLinkText} linkURL="/" />
-          </ul>
-        </div>
-        <div className="col-12 col-sm-6">
-          <div className="row float-sm-end">
-            <IconLink linkURL={githubLink}>
-              <Github size={32} />
-            </IconLink>
-            <IconLink linkURL={linkedinLink}>
-              <Linkedin size={32} />
-            </IconLink>
-            <IconLink linkURL={instagramLink}>
-              <Instagram size={32} />
-            </IconLink>
-            <IconLink linkURL={facebookLink}>
-              <Facebook size={32} />
-            </IconLink>
+      <div className={"container-sm"}>
+        <div className="row">
+          <div className="col-lg-1"></div>
+          <div className="col-12 col-sm-5 p-4">
+            <h5>{header}</h5>
+            <ul className="footer-link-list">
+              <FooterLink linkText={imprintLinkText} linkURL="/" />
+              <FooterLink linkText={disclaimerLinkText} linkURL="/" />
+              <FooterLink linkText={cookiePolicyLinkText} linkURL="/" />
+              <FooterLink linkText={contactLinkText} linkURL="/" />
+            </ul>
+          </div>
+          <div className="col-12 col-sm-6">
+            <div className="row float-sm-end">
+              <IconLink linkURL={githubLink}>
+                <Github size={32} />
+              </IconLink>
+              <IconLink linkURL={linkedinLink}>
+                <Linkedin size={32} />
+              </IconLink>
+              <IconLink linkURL={instagramLink}>
+                <Instagram size={32} />
+              </IconLink>
+              <IconLink linkURL={facebookLink}>
+                <Facebook size={32} />
+              </IconLink>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
