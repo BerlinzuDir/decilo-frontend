@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 import Heading, {HeadingData} from "../components/Heading";
 import Benefits from "../components/Benefits";
 import FAQ from "../components/FAQ";
-import Contact from "../components/Contact";
+import ContactForm from "../components/ContactForm";
 
 import content from "../content/content.json";
 
@@ -31,7 +31,7 @@ const Home: FunctionComponent = () => {
       <Hero></Hero>
       <Heading {...localizedContent["Heading"]}></Heading>
       <Benefits></Benefits>
-      <Contact></Contact>
+      <ContactForm></ContactForm>
       <FAQ></FAQ>
       <Footer {...localizedContent["Footer"]} />
     </div>
