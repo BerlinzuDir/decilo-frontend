@@ -14,13 +14,14 @@ interface ContactProps {
     textFields: Array<string>;
     button: string;
     language: Language;
+    setLanguage: CallableFunction;
 }
 
 const Contact: FunctionComponent<ContactProps> = ({ textFields, button, language }) => {
     const router = useRouter();
     const contactAction = async (e: SyntheticEvent<EventTarget>) => {
         e.preventDefault();
-        await router.push("/contact");
+        await router.push({pathname: "/contact", query: { state: language }});
     };
     return (
         <div className="container-fluid ps-4 pe-4 pt-4 pb-4">

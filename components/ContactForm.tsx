@@ -24,11 +24,10 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
   language,
 }) => {
   const router = useRouter();
-
-  const successAction = async (e: SyntheticEvent<EventTarget>) => {
+  const submitAction = async (e: SyntheticEvent<EventTarget>) => {
     e.preventDefault();
-    await router.push("/success?lang=" + language);
-  };
+    await router.push({pathname: "/submit", query: { state: language }});
+};
   return (
     <div className="container-fluid pt-5">
       <div className="row">
@@ -53,7 +52,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
             <button
               className="btn btn-primary text-white"
               type="submit"
-              onClick={successAction}
+              onClick={submitAction}
             >
               {submitButton}
             </button>

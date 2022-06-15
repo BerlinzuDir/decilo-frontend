@@ -1,4 +1,5 @@
 import React, { useState, FunctionComponent } from "react";
+import { useRouter } from "next/router";
 
 import Header, { HeaderData } from "../components/Header";
 import Hero from "../components/Hero";
@@ -18,17 +19,34 @@ interface LocalizedContent {
 }
 
 const Contact: FunctionComponent = () => {
-    const [language, setLanguage] = useState<Language>("DE");
-    const localizedContent: LocalizedContent = content[language];
-    return (
-        <div>
-            <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
-            <Hero />
-            <Heading {...localizedContent["Heading"]}></Heading>
-            <ContactForm {...localizedContent["contactForm"]} language={language} />
-            <Footer {...localizedContent["Footer"]} />
-        </div>
-    );
+    const router = useRouter();
+    if (router.query.state && router.isReady) {
+        const lang = router.query.state as Language
+        const [language, setLanguage] = useState<Language>(lang);
+        const localizedContent: LocalizedContent = content[language];
+        return (
+            <div>
+                <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+                <Hero />
+                <Heading {...localizedContent["Heading"]}></Heading>
+                <ContactForm {...localizedContent["contactForm"]} language={language} />
+                <Footer {...localizedContent["Footer"]} />
+            </div>
+        );
+    }
+    else {
+        const [language, setLanguage] = useState<Language>("DE");
+        const localizedContent: LocalizedContent = content[language];
+        return (
+            <div>
+                <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+                <Hero />
+                <Heading {...localizedContent["Heading"]}></Heading>
+                <ContactForm {...localizedContent["contactForm"]} language={language} />
+                <Footer {...localizedContent["Footer"]} />
+            </div>
+        )
+    }
 };
 
 export default Contact;
