@@ -14,7 +14,6 @@ interface ContactProps {
     textFields: Array<string>;
     button: string;
     language: Language;
-    setLanguage: CallableFunction;
 }
 
 const Contact: FunctionComponent<ContactProps> = ({ textFields, button, language }) => {
