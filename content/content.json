@@ -21,6 +21,13 @@
         }
       ]
     },
+    "Contact": {
+      "textFields": [
+        "Möchten sie Mehr Informationen zur decilo Plattform?",
+        "Wir beantworten gerne ihre Fragen."
+      ],
+      "button": "Kontakt Aufnehmen"
+    },
     "contactForm": {
       "header": "Kontaktaufnahme",
       "formFields": [
@@ -102,8 +109,15 @@
         }
       ]
     },
+    "Contact": {
+      "textFields": [
+        "Would you like more information about the decilo platform?",
+        "We will be happy to answer your questions."
+      ],
+      "button": "Get in Touch"
+    },
     "contactForm": {
-      "header": "Get in touch",
+      "header": "Contact us",
       "formFields": [
         {
           "name": "Name",

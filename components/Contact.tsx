@@ -1,24 +1,59 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, SyntheticEvent } from "react";
+import { useRouter } from "next/router";
+import * as R from "ramda";
+
+import { Language } from "../pages/index";
 
 
-export interface ContactData { }
+export interface ContactData {
+    textFields: Array<string>;
+    button: string;
+}
 
-const Contact: FunctionComponent<ContactData> = () => {
+interface ContactProps {
+    textFields: Array<string>;
+    button: string;
+    language: Language;
+}
+
+const Contact: FunctionComponent<ContactProps> = ({ textFields, button, language }) => {
+    const router = useRouter();
+    const contactAction = async (e: SyntheticEvent<EventTarget>) => {
+        e.preventDefault();
+        await router.push("/contact");
+    };
     return (
         <div className="container-fluid ps-4 pe-4 pt-4 pb-4">
             <div className="row">
                 <div className="col-lg-1"></div>
                 <div className="col rounded-3 decilo-background">
                     <div className="container-fluid background-logo">
-                        <p className="text text-white pt-4 text-uppercase">Möchten sie Mehr Informationen zur decilo Plattformn? <br /> Wir beantworten gerne ihre Fragen.</p>
-                        <div className="text-center pb-4">
-                            <button type="button" className="btn btn-default text-white fw-bold">Kontakt Aufnehmen</button>
+                        <div className="text text-white pt-4 text-uppercase">{R.map(renderTextFields, textFields)}</div>
+                        <div className="text-center pb-4 p-4">
+                            <button type="button" className="btn btn-default text-white fw-bold" onClick={contactAction}>{button}</button>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-1"></div>
             </div>
         </div>
+    );
+};
+
+
+interface TextFieldData {
+    textField: string
+}
+
+const renderTextFields = (textField: string) => (
+    <TextField key={textField} textField={textField} />
+);
+
+const TextField: FunctionComponent<TextFieldData> = ({ textField }) => {
+    return (
+        <p className="p-0 m-0">
+            {textField} <br />
+        </p>
     );
 };
 
