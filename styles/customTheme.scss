@@ -6,14 +6,6 @@ $dark: #505050;
   background: linear-gradient(90deg, #12c989, #00f319);
 }
 
-.background-logo {
-  background-image: url(../public/images/decilo_object_contact.png);
-  width: 186px;
-  min-height:150px; 
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
-
 .footer {
   background-color: #eeeeee;
 }
@@ -52,4 +44,5 @@ $dark: #505050;
 }
 
 @import "./FAQ.scss";
+@import "./Contact.scss";
 @import "~bootstrap/scss/bootstrap";

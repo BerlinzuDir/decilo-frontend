@@ -1,0 +1,23 @@
+.background-logo {
+    background-image: url(../public/images/decilo_object_contact.png);
+    width: 186px;
+    min-height:150px; 
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+.btn-default {
+    color: #fff;
+    background-color: white;
+    border-color: #ffffff !important;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+    background-color: #1ce73e;
+    color: #1ce73e;
+
+}
