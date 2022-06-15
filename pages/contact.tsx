@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Heading, { HeadingData } from "../components/Heading";
 import ContactForm, { ContactFormData } from "../components/ContactForm";
 import Footer, { FooterData } from "../components/Footer";
+import { Language } from "./index";
 
 import content from "../content/content.json";
 
@@ -15,8 +16,6 @@ interface LocalizedContent {
     contactForm: ContactFormData;
     Footer: FooterData;
 }
-
-export type Language = "EN" | "DE";
 
 const Contact: FunctionComponent = () => {
     const [language, setLanguage] = useState<Language>("DE");
