@@ -4,7 +4,7 @@ import fancyObject from "../public/images/fancy_object.png";
 
 export default function Hero() {
   return (
-    <div className="container-fluid hero">
+    <div className="container-fluid decilo-background">
       <div className="row">
         <div className="col-lg-1"></div>
         <div className="col align-self-center p-3">
