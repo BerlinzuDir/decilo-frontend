@@ -72,9 +72,6 @@ interface FormFieldData {
 const FormField: FunctionComponent<FormFieldData> = ({ formField }) => {
   return (
     <div className="mb-3">
-      <label className="form-label text-dark" htmlFor={formField["name"]}>
-        {formField["name"]}
-      </label>
       <Input name={formField["name"]} type={formField["type"]} />
     </div>
   );
