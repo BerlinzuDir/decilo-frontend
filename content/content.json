@@ -33,37 +33,37 @@
       "formFields": {
         "firstName": {
           "name": "Vorname*",
-          "required": true,
+          "required": "true",
           "missingFieldError": ""
         },
         "lastName": {
           "name": "Nachname*",
-          "required": true,
+          "required": "true",
           "missingFieldError": ""
         },
         "company": {
           "name": "Firma",
-          "required": false,
+          "required": "false",
           "missingFieldError": ""
         },
         "email": {
           "name": "E-Mail-Adresse*",
-          "required": true,
+          "required": "true",
           "missingFieldError": ""
         },
         "phone": {
           "name": "Telefonnummer",
-          "required": false,
+          "required": "false",
           "missingFieldError": ""
         },
         "message": {
           "name": "Nachricht",
-          "required": false,
+          "required": "false",
           "missingFieldError": ""
         },
         "acceptTerms": {
           "name": "Datenschutz gelesen und aktzeptieren",
-          "required": true,
+          "required": "true",
           "missingFieldError": ""
         }
       },
@@ -144,37 +144,37 @@
       "formFields": {
         "firstName": {
           "name": "First Name*",
-          "required": true,
+          "required": "true",
           "missingFieldError": ""
         },
         "lastName": {
           "name": "Last Name*",
-          "required": true,
+          "required": "true",
           "missingFieldError": ""
         },
         "company": {
           "name": "Company",
-          "required": false,
+          "required": "false",
           "missingFieldError": ""
         },
         "email": {
           "name": "Email Address*",
-          "required": true,
+          "required": "true",
           "missingFieldError": ""
         },
         "phone": {
           "name": "Phone Number",
-          "required": false,
+          "required": "false",
           "missingFieldError": ""
         },
         "message": {
           "name": "Message",
-          "required": false,
+          "required": "false",
           "missingFieldError": ""
         },
         "acceptTerms": {
           "name": "Privacy policy read and accept",
-          "required": true,
+          "required": "true",
           "missingFieldError": ""
         }
       },

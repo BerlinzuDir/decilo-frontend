@@ -8,7 +8,7 @@ import { Language } from "../pages";
 
 export interface ContactFormData {
   header: string;
-  formFields: Array<Record<string, string>>;
+  formFields: Record<string, Record<string, string>>;
   submitButton: string;
   successPage: Record<string, string>;
 }
