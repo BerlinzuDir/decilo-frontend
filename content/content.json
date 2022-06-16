@@ -29,21 +29,44 @@
       "button": "Kontakt Aufnehmen"
     },
     "contactForm": {
-      "header": "Kontaktaufnahme",
-      "formFields": [
-        {
-          "name": "Name",
-          "type": "text"
+      "header": "Kontaktformular",
+      "formFields": {
+        "firstName": {
+          "name": "Vorname*",
+          "required": true,
+          "missingFieldError": ""
         },
-        {
-          "name": "Email Adresse",
-          "type": "email"
+        "lastName": {
+          "name": "Nachname*",
+          "required": true,
+          "missingFieldError": ""
         },
-        {
+        "company": {
+          "name": "Firma",
+          "required": false,
+          "missingFieldError": ""
+        },
+        "email": {
+          "name": "E-Mail-Adresse*",
+          "required": true,
+          "missingFieldError": ""
+        },
+        "phone": {
+          "name": "Telefonnummer",
+          "required": false,
+          "missingFieldError": ""
+        },
+        "message": {
           "name": "Nachricht",
-          "type": "textArea"
+          "required": false,
+          "missingFieldError": ""
+        },
+        "acceptTerms": {
+          "name": "Datenschutz gelesen und aktzeptieren",
+          "required": true,
+          "missingFieldError": ""
         }
-      ],
+      },
       "submitButton": "Absenden",
       "successPage": {
         "header": "Danke für deine Nachricht!",
@@ -117,21 +140,44 @@
       "button": "Get in Touch"
     },
     "contactForm": {
-      "header": "Contact us",
-      "formFields": [
-        {
-          "name": "Name",
-          "type": "text"
+      "header": "Contact Form",
+      "formFields": {
+        "firstName": {
+          "name": "First Name*",
+          "required": true,
+          "missingFieldError": ""
         },
-        {
-          "name": "Email Address",
-          "type": "email"
+        "lastName": {
+          "name": "Last Name*",
+          "required": true,
+          "missingFieldError": ""
         },
-        {
+        "company": {
+          "name": "Company",
+          "required": false,
+          "missingFieldError": ""
+        },
+        "email": {
+          "name": "Email Address*",
+          "required": true,
+          "missingFieldError": ""
+        },
+        "phone": {
+          "name": "Phone Number",
+          "required": false,
+          "missingFieldError": ""
+        },
+        "message": {
           "name": "Message",
-          "type": "textArea"
+          "required": false,
+          "missingFieldError": ""
+        },
+        "acceptTerms": {
+          "name": "Privacy policy read and accept",
+          "required": true,
+          "missingFieldError": ""
         }
-      ],
+      },
       "submitButton": "Submit",
       "successPage": {
         "header": "Thank you for your submission!",
