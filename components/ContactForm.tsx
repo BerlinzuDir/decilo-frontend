@@ -25,8 +25,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
 }) => {
   const router = useRouter();
   const submitAction = async (e: SyntheticEvent<EventTarget>) => {
-    e.preventDefault();
-    await router.push({pathname: "/submit", query: { state: language }});
+    router.push({pathname: "/submit", query: { state: language }});
 };
   return (
     <div className="container-fluid pt-5">
