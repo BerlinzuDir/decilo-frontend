@@ -33,39 +33,32 @@
       "formFields": {
         "firstName": {
           "name": "Vorname*",
-          "required": "true",
-          "missingFieldError": ""
+          "required": "true"
         },
         "lastName": {
           "name": "Nachname*",
-          "required": "true",
-          "missingFieldError": ""
+          "required": "true"
         },
         "company": {
           "name": "Firma",
-          "required": "false",
-          "missingFieldError": ""
+          "required": "false"
         },
         "email": {
           "name": "E-Mail-Adresse*",
           "required": "true",
-          "missingFieldError": ""
+          "invalidEmailMsg": "E-Mail ungültig"
         },
         "phone": {
           "name": "Telefonnummer",
-          "required": "false",
-          "missingFieldError": ""
+          "required": "false"
         },
         "message": {
           "name": "Nachricht",
-          "required": "false",
-          "missingFieldError": ""
+          "required": "false"
         },
         "acceptTerms": {
           "name": "Datenschutz gelesen und aktzeptieren",
-          "required": "true",
-          "missingFieldError": ""
-        }
+          "required": "true"        }
       },
       "submitButton": "Absenden",
       "successPage": {
@@ -144,38 +137,30 @@
       "formFields": {
         "firstName": {
           "name": "First Name*",
-          "required": "true",
-          "missingFieldError": ""
-        },
+          "required": "true"        },
         "lastName": {
           "name": "Last Name*",
-          "required": "true",
-          "missingFieldError": ""
-        },
+          "required": "true"        },
         "company": {
           "name": "Company",
-          "required": "false",
-          "missingFieldError": ""
-        },
+          "required": "false"        },
         "email": {
           "name": "Email Address*",
           "required": "true",
-          "missingFieldError": ""
+          "invalidEmailMsg": "Invalid E-Mail"
+
         },
         "phone": {
           "name": "Phone Number",
-          "required": "false",
-          "missingFieldError": ""
+          "required": "false"
         },
         "message": {
           "name": "Message",
-          "required": "false",
-          "missingFieldError": ""
+          "required": "false"
         },
         "acceptTerms": {
           "name": "Privacy policy read and accept",
-          "required": "true",
-          "missingFieldError": ""
+          "required": "true"
         }
       },
       "submitButton": "Submit",

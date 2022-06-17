@@ -4,6 +4,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { useRouter } from "next/router";
 
+import type { RequiredStringSchema } from "yup/lib/string";
+import type { StringSchema } from "yup";
+import type { AnyObject } from "yup/lib/types";
+
 import { Language } from "../pages";
 
 export interface ContactFormData {
@@ -27,27 +31,11 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
   submitButton,
   language,
 }) => {
-  // form validation rules 
-  const validationSchema = Yup.object().shape({
-    firstName: Yup.string()
-      .required(''),
-    lastName: Yup.string()
-      .required(''),
-    email: Yup.string()
-      .required('')
-      .email('Email is invalid'),
-    acceptTerms: Yup.bool()
-      .oneOf([true], '')
-  });
-  const formOptions = { resolver: yupResolver(validationSchema) };
-
-  // get functions to build form with useForm() hook
-  const { register, handleSubmit, formState } = useForm(formOptions);
+  const { register, handleSubmit, formState } = useForm(formOptions(formFields));
   const { errors } = formState;
 
   const router = useRouter();
   function onSubmit() {
-    // display form data on success
     router.push({ pathname: "/submit", query: { state: language } });
     return false;
   }
@@ -125,7 +113,9 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
                 </div>
                 <div className="form-group form-check mb-3">
                   <input type="checkbox" {...register('acceptTerms')} id="acceptTerms" className={`form-check-input ${errors.acceptTerms ? 'is-invalid' : ''}`} />
-                  <label htmlFor="acceptTerms" className="form-check-label text-uppercase">{formFields["acceptTerms"]["name"]}</label>
+                  <label htmlFor="acceptTerms" className="form-check-label text-uppercase">
+                    <a href="#" className="link-secondary">{formFields["acceptTerms"]["name"]} </a>
+                  </label>
                   <div className="invalid-feedback">{errors.acceptTerms?.message}</div>
                 </div>
                 <div className="form-group">
@@ -139,6 +129,27 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
       </div>
     </div>
   );
+}
+
+function formOptions(formFields: Record<string, Record<string, string>>) {
+  const validationSchema = Yup.object().shape(yupRecord(formFields));
+  return { resolver: yupResolver(validationSchema) };
+}
+
+function yupRecord(formFields: Record<string, Record<string, string>>) {
+  let yupRecord: Record<string, RequiredStringSchema<string | undefined, AnyObject> | StringSchema<string | undefined, AnyObject, string | undefined> | Yup.BooleanSchema<boolean | undefined, AnyObject, boolean | undefined>> = {}
+  for (const key in formFields) {
+    if (key === "acceptTerms") {
+      yupRecord[key] = formFields[key]["required"] == "true" ? Yup.bool().oneOf([true], '') : Yup.string()
+    }
+    else if (key == "email") {
+      yupRecord[key] = formFields[key]["required"] == "true" ? Yup.string().required('').email(formFields["email"]["invalidEmailMsg"]) : Yup.string()
+    }
+    else {
+      yupRecord[key] = formFields[key]["required"] == "true" ? Yup.string().required('') : Yup.string()
+    }
+  }
+  return yupRecord
 }
 
 export default ContactForm;
