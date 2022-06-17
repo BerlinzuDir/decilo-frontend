@@ -18,39 +18,22 @@ export type Language = "EN" | "DE";
 
 const Success: FunctionComponent = () => {
   const router = useRouter();
-  if (router.query.state && router.isReady) {
-    const lang = router.query.state as Language
-    const [language, setLanguage] = useState<Language>(lang);
-    const successpageContent: SuccessPageContent = content[language]["contactForm"]["successPage"];
-    const localizedContent: LocalizedContent = content[language];
-    return (
-      <div>
-        <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
-        <Hero />
-        <div className="container-fluid p-5">
-          <h4 className="text-center text-dark">{successpageContent["header"]}</h4>
-          <p className="text-center text-dark">{successpageContent["text"]}</p>
-        </div>
-        <Footer {...localizedContent["Footer"]} />
+  const lang = (router.query.state && router.isReady) ? router.query.state as Language: "DE"
+  const [language, setLanguage] = useState<Language>(lang);
+  const successpageContent: SuccessPageContent = content[language]["contactForm"]["successPage"];
+  const localizedContent: LocalizedContent = content[language];
+  return (
+    <div>
+      <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+      <Hero />
+      <div className="container-fluid p-5">
+        <h4 className="text-center text-dark">{successpageContent["header"]}</h4>
+        <p className="text-center text-dark">{successpageContent["text"]}</p>
       </div>
-    );
-  }
-  else {
-    const [language, setLanguage] = useState<Language>("DE");
-    const successpageContent: SuccessPageContent = content[language]["contactForm"]["successPage"];
-    const localizedContent: LocalizedContent = content[language];
-    return (
-      <div>
-        <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
-        <Hero />
-        <div className="container-fluid p-5">
-          <h4 className="text-center text-dark">{successpageContent["header"]}</h4>
-          <p className="text-center text-dark">{successpageContent["text"]}</p>
-        </div>
-        <Footer {...localizedContent["Footer"]} />
-      </div>
-    );
-  }
+      <Footer {...localizedContent["Footer"]} />
+    </div>
+  );
+
 };
 
 export default Success;
