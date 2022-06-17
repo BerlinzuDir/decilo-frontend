@@ -101,6 +101,10 @@
           "iconSource": "/icons/Icon_Plug-and-play.svg"
         }
       ]
+    },
+    "Imprint": {
+      "header": "Impressum",
+      "text": "blablalba"
     }
   },
   "EN": {
@@ -204,6 +208,10 @@
           "iconSource": "/icons/Icon_Plug-and-play.svg"
         }
       ]
+    },
+    "Imprint": {
+      "header": "Imprint",
+      "text": "blablalba"
     }
   }
 }
