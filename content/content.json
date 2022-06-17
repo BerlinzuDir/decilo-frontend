@@ -58,7 +58,8 @@
         },
         "acceptTerms": {
           "name": "Datenschutz gelesen und aktzeptieren",
-          "required": "true"        }
+          "required": "true"
+        }
       },
       "submitButton": "Absenden",
       "successPage": {
@@ -104,7 +105,29 @@
     },
     "Imprint": {
       "header": "Impressum",
-      "text": "blablalba"
+      "address": {
+        "company": "DeCiLo UG (haftungsbeschränkt)",
+        "street": "Glogauer Str. 21",
+        "city": "10999 Berlin",
+        "country": "Deutschland"
+      },
+      "contact": {
+        "phone": "Telefon: 030 xxx xxxx",
+        "fax": "Fax: 030 xxx xxx"
+      },
+      "email": {
+        "email": "E-Mail: info@decilo.de"
+      },
+      "taxId": {
+        "taxId": "Umsatzsteuer-ID: DExxxxxxx"
+      },
+      "registerDetails": {
+        "tradeRegister": "Handelsregister: Amtsgericht Charlottenburg (Berlin)",
+        "referenceNumber": "Aktenzeichen: HRB 241216 B"
+      },
+      "managingDirector": {
+        "managingDirector": "Geschäftsführer: Joachim Kohl"
+      }
     }
   },
   "EN": {
@@ -141,18 +164,20 @@
       "formFields": {
         "firstName": {
           "name": "First Name*",
-          "required": "true"        },
+          "required": "true"
+        },
         "lastName": {
           "name": "Last Name*",
-          "required": "true"        },
+          "required": "true"
+        },
         "company": {
           "name": "Company",
-          "required": "false"        },
+          "required": "false"
+        },
         "email": {
           "name": "Email Address*",
           "required": "true",
           "invalidEmailMsg": "Invalid E-Mail"
-
         },
         "phone": {
           "name": "Phone Number",
@@ -211,7 +236,29 @@
     },
     "Imprint": {
       "header": "Imprint",
-      "text": "blablalba"
+      "address": {
+        "company": "DeCiLo UG (haftungsbeschränkt)",
+        "street": "Glogauer Str. 21",
+        "city": "10999 Berlin",
+        "country": "Germany"
+      },
+      "contact": {
+        "phone": "Phone: 030 xxx xxxx",
+        "fax": "Fax: 030 xxx xxx"
+      },
+      "email": {
+        "email": "E-Mail: info@decilo.de"
+      },
+      "taxId": {
+        "taxId": "Tax ID: DExxxxxxx"
+      },
+      "registerDetails": {
+        "tradeRegister": "Trade Register: Amtsgericht Charlottenburg (Berlin)",
+        "referenceNumber": "File Reference: HRB 241216 B"
+      },
+      "managingDirector": {
+        "managingDirector": "Managing Director: Joachim Kohl"
+      }
     }
   }
 }
