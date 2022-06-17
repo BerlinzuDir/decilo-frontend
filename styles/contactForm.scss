@@ -1,0 +1,18 @@
+.card-background {
+    background-color: #eeeeee;
+}
+
+.btn-submit {
+    color: $primary;
+    background-color: white;
+    border-color: $primary !important;
+}
+
+.btn-submit:hover,
+.btn-submit:focus,
+.btn-submit:active,
+.btn-submit.active,
+.open .dropdown-toggle.btn-submit {
+    background-color: white;
+    color: white;
+}

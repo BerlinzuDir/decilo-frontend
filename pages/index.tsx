@@ -6,15 +6,15 @@ import Footer, { FooterData } from "../components/Footer";
 import Hero from "../components/Hero";
 import Heading, { HeadingData } from "../components/Heading";
 import Benefits, { BenefitsData } from "../components/Benefits";
-import ContactForm, { ContactFormData } from "../components/ContactForm";
+import Contact, {ContactData} from "../components/Contact";
 
 import content from "../content/content.json";
 
 interface LocalizedContent {
   Header: HeaderData;
   Heading: HeadingData;
+  Contact: ContactData;
   FAQ: FAQData;
-  contactForm: ContactFormData;
   Footer: FooterData;
   Benefits: BenefitsData;
 }
@@ -35,7 +35,7 @@ const Home: FunctionComponent = () => {
       <div className={"container-sm"}>
         <Heading {...localizedContent["Heading"]}></Heading>
         <Benefits {...localizedContent["Benefits"]}></Benefits>
-        <ContactForm {...localizedContent["contactForm"]} language={language} />
+        <Contact {...localizedContent["Contact"]} language={language}/>
         <FAQ {...localizedContent["FAQ"]}></FAQ>
       </div>
       <Footer {...localizedContent["Footer"]} />

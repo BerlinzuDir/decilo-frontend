@@ -2,11 +2,7 @@ $enable-shadows: true;
 $primary: #1dc66c;
 $dark: #505050;
 
-.hero {
-  background: linear-gradient(90deg, #12c989, #00f319);
-}
-
-.navbar {
+.decilo-background {
   background: linear-gradient(90deg, #12c989, #00f319);
 }
 
@@ -25,25 +21,29 @@ $dark: #505050;
   margin: 0;
 }
 
-.footer-link {
-}
+.footer-link {}
 
 .footer-link:link {
   text-decoration: none;
   color: #505050;
 }
+
 .footer-link:visited {
   text-decoration: none;
   color: #505050;
 }
+
 .footer-link:hover {
   text-decoration: none;
   color: #494949;
 }
+
 .footer-link:active {
   text-decoration: none;
   color: #505050;
 }
 
+@import "./contactForm.scss";
 @import "./FAQ.scss";
+@import "./Contact.scss";
 @import "~bootstrap/scss/bootstrap";

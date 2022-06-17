@@ -41,7 +41,7 @@ const FAQBullet: FunctionComponent<FAQBulletData> = ({ question, answer }) => {
   return (
     <div className="row">
       <button
-        className="btn"
+        className="btn faq-btn"
         name="button1"
         type="button"
         onClick={buttonHandler}

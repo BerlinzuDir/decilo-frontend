@@ -21,22 +21,45 @@
         }
       ]
     },
-    "contactForm": {
-      "header": "Kontaktaufnahme",
-      "formFields": [
-        {
-          "name": "Name",
-          "type": "text"
-        },
-        {
-          "name": "Email Adresse",
-          "type": "email"
-        },
-        {
-          "name": "Nachricht",
-          "type": "textArea"
-        }
+    "Contact": {
+      "textFields": [
+        "Möchten sie Mehr Informationen zur decilo Plattform?",
+        "Wir beantworten gerne ihre Fragen."
       ],
+      "button": "Kontakt Aufnehmen"
+    },
+    "contactForm": {
+      "header": "Kontaktformular",
+      "formFields": {
+        "firstName": {
+          "name": "Vorname*",
+          "required": "true"
+        },
+        "lastName": {
+          "name": "Nachname*",
+          "required": "true"
+        },
+        "company": {
+          "name": "Firma",
+          "required": "false"
+        },
+        "email": {
+          "name": "E-Mail-Adresse*",
+          "required": "true",
+          "invalidEmailMsg": "E-Mail ungültig"
+        },
+        "phone": {
+          "name": "Telefonnummer",
+          "required": "false"
+        },
+        "message": {
+          "name": "Nachricht",
+          "required": "false"
+        },
+        "acceptTerms": {
+          "name": "Datenschutz gelesen und aktzeptieren",
+          "required": "true"        }
+      },
       "submitButton": "Absenden",
       "successPage": {
         "header": "Danke für deine Nachricht!",
@@ -102,22 +125,44 @@
         }
       ]
     },
-    "contactForm": {
-      "header": "Get in touch",
-      "formFields": [
-        {
-          "name": "Name",
-          "type": "text"
-        },
-        {
-          "name": "Email Address",
-          "type": "email"
-        },
-        {
-          "name": "Message",
-          "type": "textArea"
-        }
+    "Contact": {
+      "textFields": [
+        "Would you like more information about the decilo platform?",
+        "We will be happy to answer your questions."
       ],
+      "button": "Get in Touch"
+    },
+    "contactForm": {
+      "header": "Contact Form",
+      "formFields": {
+        "firstName": {
+          "name": "First Name*",
+          "required": "true"        },
+        "lastName": {
+          "name": "Last Name*",
+          "required": "true"        },
+        "company": {
+          "name": "Company",
+          "required": "false"        },
+        "email": {
+          "name": "Email Address*",
+          "required": "true",
+          "invalidEmailMsg": "Invalid E-Mail"
+
+        },
+        "phone": {
+          "name": "Phone Number",
+          "required": "false"
+        },
+        "message": {
+          "name": "Message",
+          "required": "false"
+        },
+        "acceptTerms": {
+          "name": "Privacy policy read and accept",
+          "required": "true"
+        }
+      },
       "submitButton": "Submit",
       "successPage": {
         "header": "Thank you for your submission!",
