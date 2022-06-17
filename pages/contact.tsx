@@ -30,8 +30,8 @@ const Contact: FunctionComponent = () => {
             <div className={"container-sm"}>
                 <Heading {...localizedContent["Heading"]}></Heading>
                 <ContactForm {...localizedContent["contactForm"]} language={language} />
-                <Footer {...localizedContent["Footer"]} />
             </div>
+            <Footer {...localizedContent["Footer"]} />
         </div>
     )
 
