@@ -38,7 +38,7 @@ const Home: FunctionComponent = () => {
         <Contact {...localizedContent["Contact"]} language={language}/>
         <FAQ {...localizedContent["FAQ"]}></FAQ>
       </div>
-      <Footer {...localizedContent["Footer"]} />
+      <Footer {...localizedContent["Footer"]} language={language} />
     </div>
   );
 };

@@ -2,6 +2,8 @@ import React, { FunctionComponent } from "react";
 import Link from "next/link";
 import { Instagram, Facebook, Linkedin, Github } from "react-bootstrap-icons";
 
+import { Language } from "../pages/index";
+
 export interface FooterData {
   header: string;
   imprintLinkText: string;
@@ -14,7 +16,20 @@ export interface FooterData {
   facebookLink: string;
 }
 
-const Footer: FunctionComponent<FooterData> = ({
+interface FooterProps {
+  header: string;
+  imprintLinkText: string;
+  disclaimerLinkText: string;
+  cookiePolicyLinkText: string;
+  contactLinkText: string;
+  githubLink: string;
+  linkedinLink: string;
+  instagramLink: string;
+  facebookLink: string;
+  language: Language;
+}
+
+const Footer: FunctionComponent<FooterProps> = ({
   header,
   imprintLinkText,
   disclaimerLinkText,
@@ -24,6 +39,7 @@ const Footer: FunctionComponent<FooterData> = ({
   instagramLink,
   facebookLink,
   githubLink,
+  language,
 }) => {
   return (
     <div className="container-fluid h-100 footer">
@@ -33,7 +49,7 @@ const Footer: FunctionComponent<FooterData> = ({
           <div className="col-12 col-sm-5 p-4">
             <h5>{header}</h5>
             <ul className="footer-link-list">
-              <FooterLink linkText={imprintLinkText} linkURL="/" />
+              <FooterLink linkText={imprintLinkText} linkURL={'/imprint' + `?state=${language}`} />
               <FooterLink linkText={disclaimerLinkText} linkURL="/" />
               <FooterLink linkText={cookiePolicyLinkText} linkURL="/" />
               <FooterLink linkText={contactLinkText} linkURL="/" />

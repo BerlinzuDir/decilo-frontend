@@ -32,7 +32,7 @@ const Success: FunctionComponent = () => {
           <p className="text-center text-dark">{successpageContent["text"]}</p>
         </div>
       </div>
-      <Footer {...localizedContent["Footer"]} />
+      <Footer {...localizedContent["Footer"]} language={language} />
     </div>
   );
 
