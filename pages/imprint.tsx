@@ -47,7 +47,7 @@ const Imprint: FunctionComponent = () => {
                     </div>
                 </div>
             </div>
-            <Footer {...localizedContent["Footer"]} />
+            <Footer {...localizedContent["Footer"]} language={language} />
         </div >
     );
 
