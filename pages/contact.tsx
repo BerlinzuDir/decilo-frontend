@@ -27,9 +27,11 @@ const Contact: FunctionComponent = () => {
         <div>
             <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
             <Hero />
-            <Heading {...localizedContent["Heading"]}></Heading>
-            <ContactForm {...localizedContent["contactForm"]} language={language} />
-            <Footer {...localizedContent["Footer"]} />
+            <div className={"container-sm"}>
+                <Heading {...localizedContent["Heading"]}></Heading>
+                <ContactForm {...localizedContent["contactForm"]} language={language} />
+                <Footer {...localizedContent["Footer"]} />
+            </div>
         </div>
     )
 
