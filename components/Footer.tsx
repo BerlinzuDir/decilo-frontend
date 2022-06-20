@@ -50,7 +50,7 @@ const Footer: FunctionComponent<FooterProps> = ({
             <h5>{header}</h5>
             <ul className="footer-link-list">
               <FooterLink linkText={imprintLinkText} linkURL={'/imprint' + `?state=${language}`} />
-              <FooterLink linkText={disclaimerLinkText} linkURL="/" />
+              <FooterLink linkText={disclaimerLinkText} linkURL={'/dataPrivacy' + `?state=${language}`} />
               <FooterLink linkText={cookiePolicyLinkText} linkURL="/" />
               <FooterLink linkText={contactLinkText} linkURL="/" />
             </ul>
