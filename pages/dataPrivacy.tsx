@@ -1,15 +1,16 @@
 import React, { useState, FunctionComponent } from "react";
 import { useRouter } from "next/router";
-import ReactHtmlParser from 'react-html-parser'; 
+import parse from 'html-react-parser';
+import * as R from "ramda"
+import * as RA from 'ramda-adjunct'
 
 import Header, { HeaderData } from "../components/Header";
 import Heading, { HeadingData } from "../components/Heading";
 import Hero from "../components/Hero";
 import Footer, { FooterData } from "../components/Footer";
 
+import html from '../content/dataPrivacy.html'
 import content from "../content/content.json";
-
-type DataPrivacyPageContent = any
 
 interface LocalizedContent {
     Header: HeaderData;
@@ -19,11 +20,10 @@ interface LocalizedContent {
 
 export type Language = "EN" | "DE";
 
-const Imprint: FunctionComponent = () => {
+const DataPrivacy: FunctionComponent = () => {
     const router = useRouter();
     const lang = (router.query.state && router.isReady) ? router.query.state as Language : "DE"
     const [language, setLanguage] = useState<Language>(lang);
-    const DataPrivacyPageContent: DataPrivacyPageContent = "<html><p>test</p></html>";
     const localizedContent: LocalizedContent = content[language];
     return (
         <div>
@@ -35,25 +35,28 @@ const Imprint: FunctionComponent = () => {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <div className="col-sm align-self-center">
-                        <div> { ReactHtmlParser (DataPrivacyPageContent) } </div>
+                        <div className="text-dark"> {parse(styleHTML(html))} </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer {...localizedContent["Footer"]} />
+            <Footer {...localizedContent["Footer"]} language={language} />
         </div >
     );
 
 };
 
-function renderTextBlock(textBlock: string | Record<string, string>) {
-    return (
-        <div>
-            {Object.entries(textBlock).map(([key, value]) => (
-                <p key={key} className="m-0">{value}</p>
-            ))}
-        </div>
-    )
+function styleHTML(html: string) {
+    return R.pipe(
+        RA.replaceAll("<html>", ""),
+        RA.replaceAll("</html", ""),
+        RA.replaceAll("<h3", "<p classname='fs-5'"),
+        RA.replaceAll("</h3>", "</p>"),
+        RA.replaceAll("<h2", '<p classname="fs-5"'),
+        RA.replaceAll("</h2>", "</p>"),
+        RA.replaceAll("<h1", "<h4"),
+        RA.replaceAll("</h1>", "</h4>"),
+    )(html)
 }
 
-export default Imprint;
+export default DataPrivacy;
