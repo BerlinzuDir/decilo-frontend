@@ -1,14 +1,16 @@
 import React, { useState, FunctionComponent } from "react";
 import { useRouter } from "next/router";
+import parse from 'html-react-parser';
+import * as R from "ramda"
+import * as RA from 'ramda-adjunct'
 
 import Header, { HeaderData } from "../components/Header";
 import Heading, { HeadingData } from "../components/Heading";
 import Hero from "../components/Hero";
 import Footer, { FooterData } from "../components/Footer";
 
+import html from '../content/dataPrivacy.html'
 import content from "../content/content.json";
-
-type ImprintPageContent = Record<string, string | Record<string, string>>;
 
 interface LocalizedContent {
     Header: HeaderData;
@@ -18,11 +20,10 @@ interface LocalizedContent {
 
 export type Language = "EN" | "DE";
 
-const Imprint: FunctionComponent = () => {
+const DataPrivacy: FunctionComponent = () => {
     const router = useRouter();
     const lang = (router.query.state && router.isReady) ? router.query.state as Language : "DE"
     const [language, setLanguage] = useState<Language>(lang);
-    const ImprintPageContent: ImprintPageContent = content[language]["Imprint"];
     const localizedContent: LocalizedContent = content[language];
     return (
         <div>
@@ -34,15 +35,7 @@ const Imprint: FunctionComponent = () => {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <div className="col-sm align-self-center">
-                            <h4 className="text text-dark pb-4">{ImprintPageContent["header"]}</h4>
-                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["address"])}</p>
-                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["contact"])}</p>
-                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["email"])}</p>
-                        </div>
-                        <div className="col-sm align-self-center">
-                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["taxId"])}</p>
-                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["registerDetails"])}</p>
-                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["managingDirector"])}</p>
+                        <div className="text-dark"> {parse(styleHTML(html))} </div>
                         </div>
                     </div>
                 </div>
@@ -53,14 +46,19 @@ const Imprint: FunctionComponent = () => {
 
 };
 
-function renderTextBlock(textBlock: string | Record<string, string>) {
-    return (
-        <div>
-            {Object.entries(textBlock).map(([key, value]) => (
-                <p key={key} className="m-0">{value}</p>
-            ))}
-        </div>
-    )
+function styleHTML(html: string): any {
+    const replaceAll = R.invoker(2, 'replaceAll')
+
+    return R.pipe(
+        replaceAll("<html>", ""),
+        replaceAll("</html>", ""),
+        replaceAll("<h3", "<p classname='fs-5'"),
+        replaceAll("</h3>", "</p>"),
+        replaceAll("<h2", '<p classname="fs-5"'),
+        replaceAll("</h2>", "</p>"),
+        replaceAll("<h1", "<h4"),
+        replaceAll("</h1>", "</h4>"),
+    )(html)
 }
 
-export default Imprint;
+export default DataPrivacy;
