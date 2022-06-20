@@ -10,7 +10,7 @@ const Abstract: FunctionComponent<AbstractData> = ({ abstractText }) => {
             <div className="row">
                 <div className="col-lg-1"></div>
                 <div className="col align-self-center">
-                    <p>{abstractText}</p>
+                    <p className="text-dark">{abstractText}</p>
 
                 </div>
                 <div className="col-lg-1"></div>
