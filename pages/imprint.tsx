@@ -34,15 +34,15 @@ const Imprint: FunctionComponent = () => {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <div className="col-sm align-self-center">
-                            <h4 className="text text-dark ps-3 pb-4">{ImprintPageContent["header"]}</h4>
-                            <p className="text text-dark ps-3">{renderTextBlock(ImprintPageContent["address"])}</p>
-                            <p className="text text-dark ps-3">{renderTextBlock(ImprintPageContent["contact"])}</p>
-                            <p className="text text-dark ps-3">{renderTextBlock(ImprintPageContent["email"])}</p>
+                            <h4 className="text text-dark pb-4">{ImprintPageContent["header"]}</h4>
+                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["address"])}</p>
+                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["contact"])}</p>
+                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["email"])}</p>
                         </div>
                         <div className="col-sm align-self-center">
-                            <p className="text text-dark ps-3">{renderTextBlock(ImprintPageContent["taxId"])}</p>
-                            <p className="text text-dark ps-3">{renderTextBlock(ImprintPageContent["registerDetails"])}</p>
-                            <p className="text text-dark ps-3">{renderTextBlock(ImprintPageContent["managingDirector"])}</p>
+                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["taxId"])}</p>
+                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["registerDetails"])}</p>
+                            <p className="text text-dark">{renderTextBlock(ImprintPageContent["managingDirector"])}</p>
                         </div>
                     </div>
                 </div>
