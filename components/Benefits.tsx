@@ -53,7 +53,7 @@ const Benefits: FunctionComponent<BenefitsData> = ({ heading, benefits }) => {
       <div className="row">
         <div className="col-lg-1"></div>
         <div className="col align-self-center">
-          <h5 className="p-3 pb-4 m-0 text-dark fw-bold">{heading}</h5>
+          <h5 className="pb-4 m-0 text-dark fw-bold">{heading}</h5>
           <div className={"row"}>{R.map(renderBenefit, benefits)}</div>
         </div>
         <div className="col-lg-1"></div>

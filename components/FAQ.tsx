@@ -8,7 +8,7 @@ export type FAQData = {
 
 const FAQ: FunctionComponent<FAQData> = ({ header, FAQs }) => {
   return (
-    <div className="container-fluid pt-5 px-4">
+    <div className="container-fluid pt-5">
       <div className="row">
         <div className="col-lg-1"></div>
         <div className="col">
@@ -48,7 +48,7 @@ const FAQBullet: FunctionComponent<FAQBulletData> = ({ question, answer }) => {
       >
         <div className="row">
           <div className={"col-10"}>
-            <p className="text text-dark float-start pt-3"> {question} </p>
+            <p className="text text-dark float-start ps-2 pt-3"> {question} </p>
           </div>
           <div className={"col-2"}>
             <p className="text text-primary float-end fw-bold fs-1">+</p>
@@ -56,10 +56,10 @@ const FAQBullet: FunctionComponent<FAQBulletData> = ({ question, answer }) => {
         </div>
       </button>
       <div className={"row"}>
-        <p className="text ps-3"> {clickedButton ? answer : ""} </p>
+        <p className="text text-dark ps-4"> {clickedButton ? answer : ""} </p>
       </div>
 
-      <div className={"row ps-3"}>
+      <div className={"row ps-4"}>
         <hr className={""} />
       </div>
     </div>
