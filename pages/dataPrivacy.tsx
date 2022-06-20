@@ -49,7 +49,7 @@ const DataPrivacy: FunctionComponent = () => {
 function styleHTML(html: string) {
     return R.pipe(
         RA.replaceAll("<html>", ""),
-        RA.replaceAll("</html", ""),
+        RA.replaceAll("</html>", ""),
         RA.replaceAll("<h3", "<p classname='fs-5'"),
         RA.replaceAll("</h3>", "</p>"),
         RA.replaceAll("<h2", '<p classname="fs-5"'),
