@@ -7,7 +7,7 @@ import Hero from "../components/Hero";
 import Heading, { HeadingData } from "../components/Heading";
 import Abstract, { AbstractData } from "../components/Abstract";
 import Benefits, { BenefitsData } from "../components/Benefits";
-import Contact, {ContactData} from "../components/Contact";
+import Contact, { ContactData } from "../components/Contact";
 
 import content from "../content/content.json";
 
@@ -38,7 +38,7 @@ const Home: FunctionComponent = () => {
         <Heading {...localizedContent["Heading"]} />
         <Abstract {...localizedContent["Abstract"]} />
         <Benefits {...localizedContent["Benefits"]} />
-        <Contact {...localizedContent["Contact"]} language={language}/>
+        <Contact {...localizedContent["Contact"]} language={language} />
         <FAQ {...localizedContent["FAQ"]}></FAQ>
       </div>
       <Footer {...localizedContent["Footer"]} language={language} />
