@@ -46,16 +46,18 @@ const DataPrivacy: FunctionComponent = () => {
 
 };
 
-function styleHTML(html: string) {
+function styleHTML(html: string): any {
+    const replaceAll = R.invoker(2, 'replaceAll')
+
     return R.pipe(
-        RA.replaceAll("<html>", ""),
-        RA.replaceAll("</html>", ""),
-        RA.replaceAll("<h3", "<p classname='fs-5'"),
-        RA.replaceAll("</h3>", "</p>"),
-        RA.replaceAll("<h2", '<p classname="fs-5"'),
-        RA.replaceAll("</h2>", "</p>"),
-        RA.replaceAll("<h1", "<h4"),
-        RA.replaceAll("</h1>", "</h4>"),
+        replaceAll("<html>", ""),
+        replaceAll("</html>", ""),
+        replaceAll("<h3", "<p classname='fs-5'"),
+        replaceAll("</h3>", "</p>"),
+        replaceAll("<h2", '<p classname="fs-5"'),
+        replaceAll("</h2>", "</p>"),
+        replaceAll("<h1", "<h4"),
+        replaceAll("</h1>", "</h4>"),
     )(html)
 }
 
