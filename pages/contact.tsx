@@ -25,10 +25,12 @@ const Contact: FunctionComponent = () => {
     const localizedContent: LocalizedContent = content[language];
     return (
         <div>
-            <Navbar {...localizedContent["Navbar"]} setLanguage={setLanguage} />
+            <Navbar {...localizedContent["Navbar"]} setLanguage={setLanguage} language={language} />
             <Hero language={language} />
             <div className={"container-sm"}>
-                <Heading {...localizedContent["Heading"]}></Heading>
+                <div id="Heading">
+                    <Heading {...localizedContent["Heading"]}></Heading>
+                </div>
                 <ContactForm {...localizedContent["contactForm"]} language={language} />
             </div>
             <Footer {...localizedContent["Footer"]} language={language} />

@@ -27,7 +27,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({
   const router = useRouter();
     const contactAction = async (e: SyntheticEvent<EventTarget>) => {
         e.preventDefault();
-        await router.push({pathname: "/contact", query: { state: language }});
+        await router.push(`/contact?state=${language}#Heading`);
     };
 
   function setLanguageToDE() {
