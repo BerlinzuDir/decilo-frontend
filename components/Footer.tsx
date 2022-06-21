@@ -69,7 +69,7 @@ const Footer: FunctionComponent<FooterProps> = ({
               <IconLink linkURL={githubLink}>
                 <Github size={32} />
               </IconLink>
-              <IconLink linkURL={linkedinLink}>
+              {/* <IconLink linkURL={linkedinLink}> 
                 <Linkedin size={32} />
               </IconLink>
               <IconLink linkURL={instagramLink}>
@@ -77,7 +77,7 @@ const Footer: FunctionComponent<FooterProps> = ({
               </IconLink>
               <IconLink linkURL={facebookLink}>
                 <Facebook size={32} />
-              </IconLink>
+              </IconLink> */}
             </div>
           </div>
         </div>
