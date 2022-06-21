@@ -26,7 +26,10 @@ export type Language = "EN" | "DE";
 
 const Home: FunctionComponent = () => {
   const router = useRouter();
-  const lang = (router.query.state && router.isReady) ? router.query.state as Language : "DE"
+  const lang =
+    router.query.state && router.isReady
+      ? (router.query.state as Language)
+      : "DE";
   const [language, setLanguage] = useState<Language>(lang);
   const localizedContent: LocalizedContent = content[language];
   return (

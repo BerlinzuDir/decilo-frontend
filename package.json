@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && yarn prettier --check ."
+    "lint": "next lint && yarn prettier --check .",
+    "test": "yarn jest",
+    "watch": "yarn jest --watch"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.1",
@@ -27,13 +29,20 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@types/chai": "^4.3.1",
+    "@types/jest": "^28.1.2",
     "@types/ramda": "^0.28.14",
     "@types/webpack-dev-server": "^4.7.2",
+    "chai": "^4.3.6",
     "css-loader": "^6.7.1",
     "eslint": "^8.17.0",
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "html-loader": "^3.1.2",
+    "jest": "^28.1.1",
     "node-sass": "^7.0.1",
     "prettier": "^2.6.2",
     "sass-loader": "^13.0.0",
