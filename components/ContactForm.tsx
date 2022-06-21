@@ -48,7 +48,9 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
           <h5 className="text-dark">{header}</h5>
           <div className="card-background rounded">
             <div className="card-body">
-              <form data-netlify="true" method="POST" netlify-honeypot="bot-field" onSubmit={handleSubmit(onSubmit)}>
+              <form name='contact-form' data-netlify="true" method="POST" netlify-honeypot="bot-field" onSubmit={handleSubmit(onSubmit)}>
+                {/* This hidden field is required because of https://community.netlify.com/t/forms-not-being-sent-with-next-js/15602 */}
+                <input type="hidden" name="form-name" value="contact-form" />
                 <p className="visually-hidden">
                   <label> Don not fill this out if you are human:{" "} <input name="bot-field" /> </label>
                 </p>
