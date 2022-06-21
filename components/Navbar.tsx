@@ -71,8 +71,8 @@ const Navbar: FunctionComponent<NavbarProps> = ({
                 type="button"
                 className={
                   language === "EN"
-                    ? "btn ps-1 pe-0 text-white fw-bold"
-                    : "btn ps-1 pe-0 text-white"
+                    ? "btn ps-1 pe-2 text-white fw-bold"
+                    : "btn ps-1 pe-2 text-white"
                 }
                 onClick={setLanguageToEN}
               >
