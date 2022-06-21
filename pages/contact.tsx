@@ -10,31 +10,32 @@ import { Language } from "./index";
 
 import content from "../content/content.json";
 
-
 interface LocalizedContent {
-    Header: HeaderData;
-    Heading: HeadingData;
-    contactForm: ContactFormData;
-    Footer: FooterData;
+  Header: HeaderData;
+  Heading: HeadingData;
+  contactForm: ContactFormData;
+  Footer: FooterData;
 }
 
 const Contact: FunctionComponent = () => {
-    const router = useRouter();
-    const lang = (router.query.state && router.isReady) ? router.query.state as Language : "DE"
-    const [language, setLanguage] = useState<Language>(lang);
-    const localizedContent: LocalizedContent = content[language];
-    return (
-        <div>
-            <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
-            <Hero language={language} />
-            <div className={"container-sm"}>
-                <Heading {...localizedContent["Heading"]}></Heading>
-                <ContactForm {...localizedContent["contactForm"]} language={language} />
-            </div>
-            <Footer {...localizedContent["Footer"]} language={language} />
-        </div>
-    )
-
+  const router = useRouter();
+  const lang =
+    router.query.state && router.isReady
+      ? (router.query.state as Language)
+      : "DE";
+  const [language, setLanguage] = useState<Language>(lang);
+  const localizedContent: LocalizedContent = content[language];
+  return (
+    <div>
+      <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+      <Hero language={language} />
+      <div className={"container-sm"}>
+        <Heading {...localizedContent["Heading"]}></Heading>
+        <ContactForm {...localizedContent["contactForm"]} language={language} />
+      </div>
+      <Footer {...localizedContent["Footer"]} language={language} />
+    </div>
+  );
 };
 
 export default Contact;

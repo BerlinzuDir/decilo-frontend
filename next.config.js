@@ -7,7 +7,7 @@ module.exports = {
   webpack: (
     config,
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
-    ) => {
+  ) => {
     config.module.rules.push({
       test: /\.html$/i,
       use: [
@@ -15,8 +15,8 @@ module.exports = {
           loader: "html-loader",
         },
       ],
-    })
+    });
 
-    return config
+    return config;
   },
-}
+};
