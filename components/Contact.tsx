@@ -26,9 +26,9 @@ const Contact: FunctionComponent<ContactProps> = ({
     await router.push(`/contact?state=${language}#Heading`);
   };
   return (
-    <div className="container-fluid ps-4 pe-4 pt-5 pb-5">
+    <div className="container-fluid ps-4 pe-4 pt-5 pb-5 ps-3">
       <div className="row">
-        <div className="col-lg-1"></div>
+      <div className="col-sm-1"></div>
         <div className="col rounded-3 decilo-background">
           <div className="container-fluid background-logo">
             <div className="text text-white pt-4 text-uppercase">
@@ -45,7 +45,6 @@ const Contact: FunctionComponent<ContactProps> = ({
             </div>
           </div>
         </div>
-        <div className="col-lg-1"></div>
         <div className="col-lg-1"></div>
       </div>
     </div>

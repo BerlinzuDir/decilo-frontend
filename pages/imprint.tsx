@@ -41,7 +41,7 @@ const Imprint: FunctionComponent = () => {
         </div>
         <div className="container-fluid pt-5">
           <div className="row">
-            <div className="col-lg-1"></div>
+            <div className="col-sm-1"></div>
             <div className="col-sm align-self-center">
               <h4 className="text text-dark pb-4">
                 {ImprintPageContent["header"]}
