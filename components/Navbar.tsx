@@ -46,7 +46,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({
             <li className="nav-item active">
               <a
                 type="button"
-                className="btn pe-0 text-white fw-bold"
+                className="btn pe-1 text-white fw-bold"
                 onClick={contactAction}
               >
                 {contactButton}
@@ -55,17 +55,17 @@ const Navbar: FunctionComponent<NavbarProps> = ({
             <li className="nav-item active">
               <a
                 type="button"
-                className="btn pe-0 text-white"
+                className={language === "DE" ? "btn pe-1 text-white fw-bold" : "btn pe-1 pe-1 text-white"}
                 onClick={setLanguageToDE}
               >
                 {buttonDE}
               </a>
             </li>
-            <li className="ps-1 pe-1 pt-2 text-white">|</li>
+            <li className="pt-2 text-white">|</li>
             <li className="nav-item active">
               <a
                 type="button"
-                className="btn ps-0 text-white"
+                className={language === "EN" ? "btn ps-1 pe-0 text-white fw-bold" : "btn ps-1 pe-0 text-white"}
                 onClick={setLanguageToEN}
               >
                 {buttonEN}
