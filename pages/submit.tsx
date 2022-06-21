@@ -23,7 +23,7 @@ const Success: FunctionComponent = () => {
   const localizedContent: LocalizedContent = content[language];
   return (
     <div>
-      <Navbar {...localizedContent["Navbar"]} setLanguage={setLanguage} />
+      <Navbar {...localizedContent["Navbar"]} setLanguage={setLanguage} language={language} />
       <Hero language={language} />
       <div className={"container-sm"}>
         <div className="container-fluid p-5">

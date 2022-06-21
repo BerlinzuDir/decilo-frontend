@@ -26,7 +26,7 @@ const Imprint: FunctionComponent = () => {
     const localizedContent: LocalizedContent = content[language];
     return (
         <div>
-            <Navbar {...localizedContent["Navbar"]} setLanguage={setLanguage} />
+            <Navbar {...localizedContent["Navbar"]} setLanguage={setLanguage} language={language} />
             <Hero language={language} />
             <div className={"container-sm pb-5"}>
                 <Heading {...localizedContent["Heading"]} />
