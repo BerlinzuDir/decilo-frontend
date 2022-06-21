@@ -4,7 +4,6 @@ import * as R from "ramda";
 
 import { Language } from "../pages/index";
 
-
 export interface ContactData {
     textFields: Array<string>;
     button: string;
@@ -35,14 +34,14 @@ const Contact: FunctionComponent<ContactProps> = ({ textFields, button, language
                     </div>
                 </div>
                 <div className="col-lg-1"></div>
+                <div className="col-lg-1"></div>
             </div>
         </div>
     );
 };
 
-
 interface TextFieldData {
-    textField: string
+    textField: string;
 }
 
 const renderTextFields = (textField: string) => (

@@ -20,7 +20,7 @@ const Benefit: FunctionComponent<BenefitProps> = ({
 }) => {
   return (
     <div className={"container-fluid col-6 col-lg-3 p-4 px-xl-5"}>
-      <div className={"row"} style={{'height': '80px'}}>
+      <div className={"row"} style={{ height: "80px" }}>
         <div className={"col-3"}>
           <Image layout={"fixed"} width={40} height={50} src={iconSource} />
         </div>

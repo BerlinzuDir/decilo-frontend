@@ -10,7 +10,6 @@ import { Language } from "./index";
 
 import content from "../content/content.json";
 
-
 interface LocalizedContent {
     Navbar: NavbarData;
     Heading: HeadingData;
@@ -36,7 +35,6 @@ const Contact: FunctionComponent = () => {
             <Footer {...localizedContent["Footer"]} language={language} />
         </div>
     )
-
 };
 
 export default Contact;
