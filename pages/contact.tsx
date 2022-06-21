@@ -35,7 +35,7 @@ const Contact: FunctionComponent = () => {
       <Hero language={language} />
       <div className={"container-sm"}>
         <div id="Heading">
-          <Heading {...localizedContent["Heading"]}></Heading>
+          <Heading {...localizedContent["Heading"]} />
         </div>
         <ContactForm {...localizedContent["contactForm"]} language={language} />
       </div>

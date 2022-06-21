@@ -36,7 +36,9 @@ const Imprint: FunctionComponent = () => {
       />
       <Hero language={language} />
       <div className={"container-sm pb-5"}>
-        <Heading {...localizedContent["Heading"]} />
+        <div id="Heading">
+          <Heading {...localizedContent["Heading"]} />
+        </div>
         <div className="container-fluid pt-5">
           <div className="row">
             <div className="col-lg-1"></div>
@@ -44,26 +46,26 @@ const Imprint: FunctionComponent = () => {
               <h4 className="text text-dark pb-4">
                 {ImprintPageContent["header"]}
               </h4>
-              <p className="text text-dark">
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["address"])}
-              </p>
-              <p className="text text-dark">
+              </div>
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["contact"])}
-              </p>
-              <p className="text text-dark">
+              </div>
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["email"])}
-              </p>
+              </div>
             </div>
             <div className="col-sm align-self-center">
-              <p className="text text-dark">
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["taxId"])}
-              </p>
-              <p className="text text-dark">
+              </div>
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["registerDetails"])}
-              </p>
-              <p className="text text-dark">
+              </div>
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["managingDirector"])}
-              </p>
+              </div>
             </div>
           </div>
         </div>
