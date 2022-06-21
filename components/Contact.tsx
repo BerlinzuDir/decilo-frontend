@@ -23,7 +23,7 @@ const Contact: FunctionComponent<ContactProps> = ({ textFields, button, language
         await router.push({pathname: "/contact", query: { state: language }});
     };
     return (
-        <div className="container-fluid ps-4 pe-4 pt-4 pb-4">
+        <div className="container-fluid ps-4 pe-4 pt-5 pb-5">
             <div className="row">
                 <div className="col-lg-1"></div>
                 <div className="col rounded-3 decilo-background">

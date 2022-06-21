@@ -38,7 +38,6 @@ const Home: FunctionComponent = () => {
         <Abstract {...localizedContent["Abstract"]} />
         <Benefits {...localizedContent["Benefits"]} />
         <Contact {...localizedContent["Contact"]} language={language} />
-        <FAQ {...localizedContent["FAQ"]}></FAQ>
       </div>
       <Footer {...localizedContent["Footer"]} language={language} />
     </div>
