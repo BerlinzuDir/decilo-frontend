@@ -2,7 +2,8 @@
   "DE": {
     "Navbar": {
       "buttonDE": "DE",
-      "buttonEN": "EN"
+      "buttonEN": "EN",
+      "contactButton": "Kontakt"
     },
     "Heading": {
       "heading": "DeCiLo - Decentralized City Logistics",
@@ -136,7 +137,8 @@
   "EN": {
     "Navbar": {
       "buttonDE": "DE",
-      "buttonEN": "EN"
+      "buttonEN": "EN",
+      "contactButton": "Contact"
     },
     "Heading": {
       "heading": "DeCiLo - Decentralized City Logistics",
