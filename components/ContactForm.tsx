@@ -26,15 +26,21 @@ interface ContactFormProps {
   language: Language;
 }
 
-const reducer = (l: Array<string>, [key, value]: [string, string]) => {
+const concatObjectKeyValueWithEqualsAndAddToList = (l: Array<string>, [key, value]: [string, string]) => {
   return [...l, encodeURIComponent(key) + "=" + encodeURIComponent(value)];
 };
 
 export const encode: (data: Record<string, string>) => string = R.pipe(
   (data) => Object.entries(data),
-  R.reduce(reducer, []),
+  R.reduce(concatObjectKeyValueWithEqualsAndAddToList, []),
   R.join("&")
 );
+
+type Payload = {
+  method: string;
+  headers: Record<string, string>;
+  body: string;
+};
 
 const ContactForm: FunctionComponent<ContactFormProps> = ({
   header,
@@ -49,20 +55,21 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
 
   const router = useRouter();
 
-  const onSubmit = (data: Record<string, string>) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact-form",
-        ...data,
+  const onSubmit = (data: Record<string, string>): Promise<boolean> => R.pipe(
+      R.assoc("form-name", "contact-form"),
+      encode,
+      R.applySpec<Payload>({
+        method: R.always("POST"),
+        headers: R.always({
+          "Content-Type": "application/x-www-form-urlencoded",
+        }),
+        body: R.identity,
       }),
-    })
-      .then(() =>
+      payload => fetch("/", payload),
+      R.andThen(() =>
         router.push({ pathname: "/submit", query: { state: language } })
       )
-      .catch((error) => alert(error));
-  }
+    )(data);
 
   return (
     <div className="container-fluid pt-5 pb-5">
