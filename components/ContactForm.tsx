@@ -80,6 +80,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
                   <div className="form-group col">
                     <input
                       type="text"
+                      {...register('company')}
                       className={`form-control`}
                       placeholder={formFields["company"]["name"]}
                     />
@@ -88,7 +89,8 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
                 <div className="form-row mb-3">
                   <div className="form-group col">
                     <input
-                      type="text" {...register('email')}
+                      type="text"
+                      {...register('email')}
                       className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                       placeholder={formFields["email"]["name"]}
                     />
@@ -99,6 +101,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
                   <div className="form-group col">
                     <input
                       type="text"
+                      {...register('phoneNumber')}
                       className={`form-control`}
                       placeholder={formFields["phone"]["name"]}
                     />
@@ -107,6 +110,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
                 <div className="form-row mb-3">
                   <div className="form-group col">
                     <textarea
+                      {...register('message')}
                       className={`form-control`}
                       placeholder={formFields["message"]["name"]}
                       style={{ height: "10rem" }}
