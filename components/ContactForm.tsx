@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, {FunctionComponent, FormEvent} from "react";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
@@ -25,6 +25,15 @@ interface ContactFormProps {
   language: Language;
 }
 
+const encode = (data: Record<string, string>) => {
+  return Object.keys(data)
+      .map(
+          (key) =>
+              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+}
+
 const ContactForm: FunctionComponent<ContactFormProps> = ({
   header,
   formFields,
@@ -35,9 +44,18 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
   const { errors } = formState;
 
   const router = useRouter();
-  function onSubmit() {
-    router.push({ pathname: "/submit", query: { state: language } });
-    return false;
+  function onSubmit(data: Record<string, string>) {
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": 'contact-form',
+        ...data,
+      }),
+    })
+        .then(() => router.push({ pathname: "/submit", query: { state: language } }))
+        .catch((error) => alert(error));
   }
 
   return (
@@ -48,9 +66,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
           <h5 className="text-dark">{header}</h5>
           <div className="card-background rounded">
             <div className="card-body">
-              <form name='contact-form' data-netlify="true" method="POST" data-netlify-honeypot="bot-field">
-                {/* This hidden field is required because of https://community.netlify.com/t/forms-not-being-sent-with-next-js/15602 */}
-                <input type="hidden" name="form-name" value="contact-form" />
+              <form name='contact-form' data-netlify="true" method="POST" data-netlify-honeypot="bot-field" onSubmit={handleSubmit(onSubmit)}>
                 <p className="visually-hidden">
                   <label> Don not fill this out if you are human:{" "} <input name="bot-field" /> </label>
                 </p>
