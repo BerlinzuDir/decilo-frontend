@@ -26,7 +26,10 @@ interface ContactFormProps {
   language: Language;
 }
 
-const concatObjectKeyValueWithEqualsAndAddToList = (l: Array<string>, [key, value]: [string, string]) => {
+const concatObjectKeyValueWithEqualsAndAddToList = (
+  l: Array<string>,
+  [key, value]: [string, string]
+) => {
   return [...l, encodeURIComponent(key) + "=" + encodeURIComponent(value)];
 };
 
@@ -55,7 +58,8 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
 
   const router = useRouter();
 
-  const onSubmit = (data: Record<string, string>): Promise<boolean> => R.pipe(
+  const onSubmit = (data: Record<string, string>): Promise<boolean> =>
+    R.pipe(
       R.assoc("form-name", "contact-form"),
       encode,
       R.applySpec<Payload>({
@@ -65,7 +69,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
         }),
         body: R.identity,
       }),
-      payload => fetch("/", payload),
+      (payload) => fetch("/", payload),
       R.andThen(() =>
         router.push({ pathname: "/submit", query: { state: language } })
       )

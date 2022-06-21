@@ -23,7 +23,7 @@ const Contact: FunctionComponent<ContactProps> = ({
   const router = useRouter();
   const contactAction = async (e: SyntheticEvent<EventTarget>) => {
     e.preventDefault();
-    await router.push({ pathname: "/contact", query: { state: language } });
+    await router.push(`/contact?state=${language}#Heading`);
   };
   return (
     <div className="container-fluid ps-4 pe-4 pt-5 pb-5">
@@ -45,6 +45,7 @@ const Contact: FunctionComponent<ContactProps> = ({
             </div>
           </div>
         </div>
+        <div className="col-lg-1"></div>
         <div className="col-lg-1"></div>
       </div>
     </div>

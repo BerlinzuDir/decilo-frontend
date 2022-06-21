@@ -2,9 +2,8 @@ import React, { useState, FunctionComponent } from "react";
 import { useRouter } from "next/router";
 import parse from "html-react-parser";
 import * as R from "ramda";
-import * as RA from "ramda-adjunct";
 
-import Header, { HeaderData } from "../components/Header";
+import Navbar, { NavbarData } from "../components/Navbar";
 import Heading, { HeadingData } from "../components/Heading";
 import Hero from "../components/Hero";
 import Footer, { FooterData } from "../components/Footer";
@@ -13,7 +12,7 @@ import html from "../content/dataPrivacy.html";
 import content from "../content/content.json";
 
 interface LocalizedContent {
-  Header: HeaderData;
+  Navbar: NavbarData;
   Heading: HeadingData;
   Footer: FooterData;
 }
@@ -30,10 +29,16 @@ const DataPrivacy: FunctionComponent = () => {
   const localizedContent: LocalizedContent = content[language];
   return (
     <div>
-      <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+      <Navbar
+        {...localizedContent["Navbar"]}
+        setLanguage={setLanguage}
+        language={language}
+      />
       <Hero language={language} />
       <div className={"container-sm pb-5"}>
-        <Heading {...localizedContent["Heading"]} />
+        <div id="Heading">
+          <Heading {...localizedContent["Heading"]} />
+        </div>
         <div className="container-fluid pt-5">
           <div className="row">
             <div className="col-lg-1"></div>

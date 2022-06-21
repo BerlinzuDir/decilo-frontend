@@ -1,7 +1,7 @@
 import React, { useState, FunctionComponent } from "react";
 import { useRouter } from "next/router";
 
-import Header, { HeaderData } from "../components/Header";
+import Navbar, { NavbarData } from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer, { FooterData } from "../components/Footer";
 
@@ -11,7 +11,7 @@ import { Language } from "./index";
 type SuccessPageContent = Record<string, string>;
 
 interface LocalizedContent {
-  Header: HeaderData;
+  Navbar: NavbarData;
   Footer: FooterData;
 }
 
@@ -27,7 +27,11 @@ const Success: FunctionComponent = () => {
   const localizedContent: LocalizedContent = content[language];
   return (
     <div>
-      <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+      <Navbar
+        {...localizedContent["Navbar"]}
+        setLanguage={setLanguage}
+        language={language}
+      />
       <Hero language={language} />
       <div className={"container-sm"}>
         <div className="container-fluid p-5">

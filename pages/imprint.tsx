@@ -1,7 +1,7 @@
 import React, { useState, FunctionComponent } from "react";
 import { useRouter } from "next/router";
 
-import Header, { HeaderData } from "../components/Header";
+import Navbar, { NavbarData } from "../components/Navbar";
 import Heading, { HeadingData } from "../components/Heading";
 import Hero from "../components/Hero";
 import Footer, { FooterData } from "../components/Footer";
@@ -11,7 +11,7 @@ import content from "../content/content.json";
 type ImprintPageContent = Record<string, string | Record<string, string>>;
 
 interface LocalizedContent {
-  Header: HeaderData;
+  Navbar: NavbarData;
   Heading: HeadingData;
   Footer: FooterData;
 }
@@ -29,10 +29,16 @@ const Imprint: FunctionComponent = () => {
   const localizedContent: LocalizedContent = content[language];
   return (
     <div>
-      <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+      <Navbar
+        {...localizedContent["Navbar"]}
+        setLanguage={setLanguage}
+        language={language}
+      />
       <Hero language={language} />
       <div className={"container-sm pb-5"}>
-        <Heading {...localizedContent["Heading"]} />
+        <div id="Heading">
+          <Heading {...localizedContent["Heading"]} />
+        </div>
         <div className="container-fluid pt-5">
           <div className="row">
             <div className="col-lg-1"></div>
@@ -40,26 +46,26 @@ const Imprint: FunctionComponent = () => {
               <h4 className="text text-dark pb-4">
                 {ImprintPageContent["header"]}
               </h4>
-              <p className="text text-dark">
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["address"])}
-              </p>
-              <p className="text text-dark">
+              </div>
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["contact"])}
-              </p>
-              <p className="text text-dark">
+              </div>
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["email"])}
-              </p>
+              </div>
             </div>
             <div className="col-sm align-self-center">
-              <p className="text text-dark">
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["taxId"])}
-              </p>
-              <p className="text text-dark">
+              </div>
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["registerDetails"])}
-              </p>
-              <p className="text text-dark">
+              </div>
+              <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["managingDirector"])}
-              </p>
+              </div>
             </div>
           </div>
         </div>
