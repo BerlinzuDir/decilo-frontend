@@ -1,7 +1,7 @@
 import React, { useState, FunctionComponent } from "react";
 import { useRouter } from "next/router";
 
-import Header, { HeaderData } from "../components/Header";
+import Navbar, { NavbarData } from "../components/Navbar";
 import Heading, { HeadingData } from "../components/Heading";
 import Hero from "../components/Hero";
 import Footer, { FooterData } from "../components/Footer";
@@ -11,7 +11,7 @@ import content from "../content/content.json";
 type ImprintPageContent = Record<string, string | Record<string, string>>;
 
 interface LocalizedContent {
-    Header: HeaderData;
+    Navbar: NavbarData;
     Heading: HeadingData,
     Footer: FooterData;
 }
@@ -26,7 +26,7 @@ const Imprint: FunctionComponent = () => {
     const localizedContent: LocalizedContent = content[language];
     return (
         <div>
-            <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+            <Navbar {...localizedContent["Navbar"]} setLanguage={setLanguage} />
             <Hero language={language} />
             <div className={"container-sm pb-5"}>
                 <Heading {...localizedContent["Heading"]} />

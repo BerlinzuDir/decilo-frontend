@@ -1,7 +1,7 @@
 import React, { useState, FunctionComponent } from "react";
 import { useRouter } from "next/router";
 
-import Header, { HeaderData } from "../components/Header";
+import Navbar, { NavbarData } from "../components/Navbar";
 import Hero from "../components/Hero";
 import Heading, { HeadingData } from "../components/Heading";
 import ContactForm, { ContactFormData } from "../components/ContactForm";
@@ -12,7 +12,7 @@ import content from "../content/content.json";
 
 
 interface LocalizedContent {
-    Header: HeaderData;
+    Navbar: NavbarData;
     Heading: HeadingData;
     contactForm: ContactFormData;
     Footer: FooterData;
@@ -25,7 +25,7 @@ const Contact: FunctionComponent = () => {
     const localizedContent: LocalizedContent = content[language];
     return (
         <div>
-            <Header {...localizedContent["Header"]} setLanguage={setLanguage} />
+            <Navbar {...localizedContent["Navbar"]} setLanguage={setLanguage} />
             <Hero language={language} />
             <div className={"container-sm"}>
                 <Heading {...localizedContent["Heading"]}></Heading>

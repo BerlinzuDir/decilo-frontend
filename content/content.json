@@ -1,6 +1,6 @@
 {
   "DE": {
-    "Header": {
+    "Navbar": {
       "buttonDE": "DE",
       "buttonEN": "EN"
     },
@@ -134,7 +134,7 @@
     }
   },
   "EN": {
-    "Header": {
+    "Navbar": {
       "buttonDE": "DE",
       "buttonEN": "EN"
     },

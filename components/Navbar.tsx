@@ -1,17 +1,17 @@
 import React, { FunctionComponent } from "react";
 
-export interface HeaderData {
+export interface NavbarData {
   buttonDE: string;
   buttonEN: string;
 }
 
-interface HeaderProps {
+interface NavbarProps {
   buttonDE: string;
   buttonEN: string;
   setLanguage: CallableFunction;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({
+const Navbar: FunctionComponent<NavbarProps> = ({
   buttonDE,
   buttonEN,
   setLanguage,
@@ -54,4 +54,4 @@ const Header: FunctionComponent<HeaderProps> = ({
     </div>
   );
 };
-export default Header;
+export default Navbar;
