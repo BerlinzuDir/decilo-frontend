@@ -57,7 +57,7 @@ const Footer: FunctionComponent<FooterProps> = ({
                 linkText={disclaimerLinkText}
                 linkURL={"/dataPrivacy" + `?state=${language}#Heading`}
               />
-              <FooterLink linkText={cookiePolicyLinkText} linkURL="/" />
+              {/*<FooterLink linkText={cookiePolicyLinkText} linkURL="/" /> */}
               <FooterLink
                 linkText={contactLinkText}
                 linkURL={"/contact" + `?state=${language}#Heading`}
