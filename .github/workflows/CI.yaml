@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@main
       - uses: actions/cache@v2
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Setup node
         uses: actions/setup-node@v3
@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@main
       - uses: actions/cache@v2
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Setup node
         uses: actions/setup-node@v3
@@ -59,7 +59,7 @@ jobs:
         uses: actions/checkout@main
       - uses: actions/cache@v2
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Setup node
         uses: actions/setup-node@v3
