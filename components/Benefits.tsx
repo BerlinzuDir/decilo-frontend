@@ -31,7 +31,7 @@ const Benefit: FunctionComponent<BenefitProps> = ({
       <div className={"row"}>
         <hr />
       </div>
-      <div className={"row text-dark responsive-text"}>{text}</div>
+      <div className={"row text-dark"}>{text}</div>
     </div>
   );
 };
