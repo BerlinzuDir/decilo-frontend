@@ -49,17 +49,21 @@ const Imprint: FunctionComponent = () => {
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["address"])}
               </div>
+              {/* 
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["contact"])}
               </div>
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["email"])}
               </div>
+              */}
             </div>
             <div className="col-sm align-self-center">
+              {/*
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["taxId"])}
               </div>
+            */}
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["registerDetails"])}
               </div>
@@ -83,6 +87,7 @@ function renderTextBlock(textBlock: string | Record<string, string>) {
           {value}
         </p>
       ))}
+      <br />
     </div>
   );
 }
