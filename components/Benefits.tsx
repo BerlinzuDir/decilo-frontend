@@ -24,14 +24,14 @@ const Benefit: FunctionComponent<BenefitProps> = ({
         <div className={"col-3 ps-0"}>
           <Image layout={"fixed"} width={40} height={50} src={iconSource} />
         </div>
-        <div className={"col-9 text-end text-break ps-1 pe-0"}>
+        <div className={"col-9 text-end text-break text-dark ps-1 pe-0"}>
           <h6 className="benefits-heading">{heading}</h6>
         </div>
       </div>
       <div className={"row"}>
         <hr />
       </div>
-      <div className={"row text-dark"}>{text}</div>
+      <div className={"row text-dark responsive-text"}>{text}</div>
     </div>
   );
 };
