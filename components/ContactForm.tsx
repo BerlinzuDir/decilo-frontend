@@ -78,7 +78,7 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
   return (
     <div className="container-fluid pt-5 pb-5 ps-3">
       <div className="row">
-      <div className="col-lg-1"></div>
+        <div className="col-lg-1"></div>
         <div className="col-sm align-self-center pe-4">
           <h5 className="text-dark">{header}</h5>
           <div className="card-background rounded">
