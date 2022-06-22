@@ -59,10 +59,10 @@ const Imprint: FunctionComponent = () => {
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["contact"])}
               </div>
+              */}
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["email"])}
               </div>
-              */}
             </div>
             <div className="col-sm align-self-start">
               {/*
