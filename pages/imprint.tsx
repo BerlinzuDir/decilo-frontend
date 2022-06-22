@@ -42,11 +42,11 @@ const Imprint: FunctionComponent = () => {
         <div className="container-fluid pt-5">
           <div className="row">
             <div className="col-sm-1"></div>
-            <div className="col-sm align-self-center">
+            <div className="col-sm align-self-end">
               <h4 className="text text-dark pb-4">
                 {ImprintPageContent["header"]}
               </h4>
-              <div className="text text-dark">
+              <div className="text-dark">
                 {renderTextBlock(ImprintPageContent["address"])}
               </div>
               {/* 
@@ -58,7 +58,7 @@ const Imprint: FunctionComponent = () => {
               </div>
               */}
             </div>
-            <div className="col-sm align-self-center">
+            <div className="col-sm align-self-end">
               {/*
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["taxId"])}
