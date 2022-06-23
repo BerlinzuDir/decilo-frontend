@@ -10,7 +10,7 @@
       "subHeading": "making the last mile efficient"
     },
     "Abstract": {
-      "abstractText": "Die DeCiLo Plattform verbindet Logistikdienstleister der letzten Meile zu einem synergistischen Netzwerkund reduziert damit die Betriebskosten aller teilnehmenden Partner."
+      "abstractText": "Die DeCiLo Plattform verbindet Logistikdienstleister der letzten Meile zu einem synergistischen Netzwerk und reduziert damit die Betriebskosten aller teilnehmenden Partner."
     },
     "FAQ": {
       "header": "Erste Antworten",
@@ -30,7 +30,7 @@
         "Möchten sie Mehr Informationen zur decilo Plattform?",
         "Wir beantworten gerne ihre Fragen."
       ],
-      "button": "Kontakt Aufnehmen"
+      "button": "Kontakt aufnehmen"
     },
     "contactForm": {
       "header": "Kontaktformular",
@@ -68,13 +68,13 @@
       "submitButton": "Absenden",
       "successPage": {
         "header": "Danke für deine Nachricht!",
-        "text": "Wir melden uns in kürze."
+        "text": "Wir melden uns in Kürze."
       }
     },
     "Footer": {
       "header": "Allgemeine Informationen",
       "imprintLinkText": "Impressum",
-      "disclaimerLinkText": "Datenschutz",
+      "disclaimerLinkText": "Datenschutzerklärung",
       "cookiePolicyLinkText": "Cookie Policy",
       "contactLinkText": "Kontakt",
       "githubLink": "https://github.com/BerlinzuDir",
@@ -209,7 +209,7 @@
     "Footer": {
       "header": "General Information",
       "imprintLinkText": "Imprint",
-      "disclaimerLinkText": "Disclaimer",
+      "disclaimerLinkText": "Privacy Policy",
       "cookiePolicyLinkText": "Cookie Policy",
       "contactLinkText": "Contact",
       "githubLink": "https://github.com/BerlinzuDir",
