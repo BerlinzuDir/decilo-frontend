@@ -30,3 +30,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# variables
+.env
+.env.prod
+.gitsecret/keys/random_seed
+!*.secret
