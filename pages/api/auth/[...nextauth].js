@@ -8,4 +8,8 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
+  secret: process.env.NEXT_AUTH_SECRET,
+  session: {
+    strategy: "jwt",
+  },
 });

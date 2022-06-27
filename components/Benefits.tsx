@@ -22,7 +22,13 @@ const Benefit: FunctionComponent<BenefitProps> = ({
     <div className={"container-fluid col-6 col-lg-3 px-xl-5 pt-4 p-4 pe-3"}>
       <div className={"row align-items-end"} style={{ height: "80px" }}>
         <div className={"col-3 ps-0"}>
-          <Image layout={"fixed"} width={40} height={50} src={iconSource} />
+          <Image
+            layout={"fixed"}
+            width={40}
+            height={50}
+            src={iconSource}
+            alt={"Benefits icon"}
+          />
         </div>
         <div className={"col-9 text-end text-break text-dark ps-1 pe-0"}>
           <h6 className="benefits-heading">{heading}</h6>
