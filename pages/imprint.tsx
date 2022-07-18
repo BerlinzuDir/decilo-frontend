@@ -65,11 +65,9 @@ const Imprint: FunctionComponent = () => {
               </div>
             </div>
             <div className="col-sm align-self-start">
-              {/*
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["taxId"])}
               </div>
-            */}
               <div className="text text-dark">
                 {renderTextBlock(ImprintPageContent["registerDetails"])}
               </div>
