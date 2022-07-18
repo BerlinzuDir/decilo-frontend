@@ -1,7 +1,8 @@
 import React, { FunctionComponent, SyntheticEvent } from "react";
 import { useRouter } from "next/router";
+import Login from "./Login";
 
-import { Language } from "../pages/index";
+import { Language } from "../pages";
 
 export interface NavbarData {
   buttonDE: string;
@@ -65,7 +66,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({
                 {buttonDE}
               </a>
             </li>
-            <li className="pt-2 text-white">|</li>
+            <li className="pt-1 text-white">|</li>
             <li className="nav-item active">
               <a
                 type="button"
@@ -78,6 +79,10 @@ const Navbar: FunctionComponent<NavbarProps> = ({
               >
                 {buttonEN}
               </a>
+            </li>
+
+            <li className="nav-item ps-1 active">
+              <Login />
             </li>
           </ul>
         </div>
