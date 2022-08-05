@@ -19,11 +19,21 @@ type SignupFormFieldsDescription = {
 type SignupFormProps = {
   header: string;
   formDescription: SignupFormFieldsDescription;
+  onSubmit: (data: any) => void;
+};
+
+type SignupFormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  acceptTerms: boolean;
 };
 
 const SignupForm: FunctionComponent<SignupFormProps> = ({
   header,
   formDescription: { firstName, lastName, email, password, acceptTerms },
+  onSubmit,
 }) => {
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
@@ -32,7 +42,11 @@ const SignupForm: FunctionComponent<SignupFormProps> = ({
     <div className="container">
       <h5 className="text-dark">{header}</h5>
       <div className="card-body bg-light rounded">
-        <form name="signup-form" method="POST">
+        <form
+          name="signup-form"
+          method="POST"
+          onSubmit={handleSubmit((data) => onSubmit(data))}
+        >
           <div className="row mt-2">
             <div className="col-lg-6">
               <input
@@ -59,24 +73,24 @@ const SignupForm: FunctionComponent<SignupFormProps> = ({
               <div className="invalid-feedback">{errors.lastName?.message}</div>
             </div>
           </div>
-          <div className='row mt-lg-3'>
+          <div className="row mt-lg-3">
             <div className="col-lg-6  mt-lg-0 mt-3">
-                <input
-                    type="text"
-                    {...register("email")}
-                    className={`form-control ${
-                        errors.email ? "is-invalid" : ""
-                    }`}
-                    placeholder={email["label"]}/>
+              <input
+                type="text"
+                {...register("email")}
+                className={`form-control ${errors.email ? "is-invalid" : ""}`}
+                placeholder={email["label"]}
+              />
             </div>
             <div className="col-lg-6    mt-lg-0 mt-3">
               <input
-                  type="text"
-                  {...register("password")}
-                  className={`form-control ${
-                      errors.password ? "is-invalid" : ""
-                  }`}
-                  placeholder={password["label"]}/>
+                type="text"
+                {...register("password")}
+                className={`form-control ${
+                  errors.password ? "is-invalid" : ""
+                }`}
+                placeholder={password["label"]}
+              />
             </div>
           </div>
           <div className="form-group form-check my-3">
@@ -106,9 +120,9 @@ const SignupForm: FunctionComponent<SignupFormProps> = ({
           <div className="form-group">
             <button
               type="submit"
-              className="btn btn-submit text-primary mr-1 pe-4 ps-4"
+              className="btn btn-submit btn-primary text-primary mr-1 pe-4 ps-4"
             >
-              Submit
+              Sign Up
             </button>
           </div>
         </form>
