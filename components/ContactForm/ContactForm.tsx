@@ -9,7 +9,7 @@ import type { RequiredStringSchema } from "yup/lib/string";
 import type { StringSchema } from "yup";
 import type { AnyObject } from "yup/lib/types";
 
-import { Language } from "../pages";
+import { Language } from "../../pages";
 
 export interface ContactFormData {
   header: string;
@@ -185,7 +185,10 @@ const ContactForm: FunctionComponent<ContactFormProps> = ({
                     htmlFor="acceptTerms"
                     className="form-check-label text-uppercase"
                   >
-                    <a href="#" className="link-secondary">
+                    <a
+                      href="components/ContactForm/ContactForm#"
+                      className="link-secondary"
+                    >
                       {formFields["acceptTerms"]["name"]}{" "}
                     </a>
                   </label>
@@ -219,7 +222,7 @@ function formOptions(formFields: Record<string, Record<string, string>>) {
 function yupRecord(formFields: Record<string, Record<string, string>>) {
   let yupRecord: Record<
     string,
-    | RequiredStringSchema<string | undefined, AnyObject>
+    | RequiredStringSchema<string | undefined>
     | StringSchema<string | undefined, AnyObject, string | undefined>
     | Yup.BooleanSchema<boolean | undefined, AnyObject, boolean | undefined>
   > = {};

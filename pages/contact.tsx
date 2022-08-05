@@ -4,7 +4,9 @@ import { useRouter } from "next/router";
 import Navbar, { NavbarData } from "../components/Navbar";
 import Hero from "../components/Hero";
 import Heading, { HeadingData } from "../components/Heading";
-import ContactForm, { ContactFormData } from "../components/ContactForm";
+import ContactForm, {
+  ContactFormData,
+} from "../components/ContactForm/ContactForm";
 import Footer, { FooterData } from "../components/Footer";
 import { Language } from "./index";
 
