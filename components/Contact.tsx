@@ -2,7 +2,7 @@ import React, { FunctionComponent, SyntheticEvent } from "react";
 import { useRouter } from "next/router";
 import * as R from "ramda";
 
-import { Language } from "../pages/index";
+import { Language } from "../hooks/useLanguage";
 
 export interface ContactData {
   textFields: Array<string>;
@@ -26,26 +26,20 @@ const Contact: FunctionComponent<ContactProps> = ({
     await router.push(`/contact?state=${language}#Heading`);
   };
   return (
-    <div className="container-fluid ps-4 pe-4 pt-5 pb-5 ps-3">
-      <div className="row">
-        <div className="col-sm-1"></div>
-        <div className="col rounded-3 decilo-background">
-          <div className="container-fluid background-logo">
-            <div className="text text-white pt-4 text-uppercase">
-              {R.map(renderTextFields, textFields)}
-            </div>
-            <div className="text-center pb-4 p-4">
-              <button
-                type="button"
-                className="btn btn-default text-white fw-bold"
-                onClick={contactAction}
-              >
-                {button}
-              </button>
-            </div>
-          </div>
+    <div className="col p-3 mt-4 mb-5 rounded-3 decilo-background">
+      <div className="container-fluid background-logo">
+        <div className="text text-white pt-4 text-uppercase">
+          {R.map(renderTextFields, textFields)}
         </div>
-        <div className="col-lg-1"></div>
+        <div className="text-center pb-4 p-4">
+          <button
+            type="button"
+            className="btn btn-default text-white fw-bold"
+            onClick={contactAction}
+          >
+            {button}
+          </button>
+        </div>
       </div>
     </div>
   );

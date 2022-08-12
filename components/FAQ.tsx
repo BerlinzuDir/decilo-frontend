@@ -1,12 +1,12 @@
-import React, { useState, FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 import * as R from "ramda";
 
 export type FAQData = {
   header: string;
-  FAQs: ReadonlyArray<FAQBulletData>;
+  faqs: ReadonlyArray<FAQBulletData>;
 };
 
-const FAQ: FunctionComponent<FAQData> = ({ header, FAQs }) => {
+const FAQ: FunctionComponent<FAQData> = ({ header, faqs }) => {
   return (
     <div className="container-fluid pt-5">
       <div className="row">
@@ -15,7 +15,7 @@ const FAQ: FunctionComponent<FAQData> = ({ header, FAQs }) => {
           <div className="row">
             <p className="header text float-start text-dark fs-4">{header}</p>
           </div>
-          {R.map(renderFaqBullet, FAQs)}
+          {R.map(renderFaqBullet, faqs)}
         </div>
         <div className="col-lg-1"></div>
       </div>

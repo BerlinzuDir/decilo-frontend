@@ -1,48 +1,32 @@
-import React, { useState, FunctionComponent } from "react";
-import { useRouter } from "next/router";
+import React, { FunctionComponent } from "react";
 
-import Navbar, { NavbarData } from "../components/Navbar";
-import Hero from "../components/Hero";
-import Heading, { HeadingData } from "../components/Heading";
-import ContactForm, {
-  ContactFormData,
-} from "../components/ContactForm/ContactForm";
-import Footer, { FooterData } from "../components/Footer";
-import { Language } from "./index";
+import { NavbarData } from "../components/Navbar";
+import { HeadingData } from "../components/Heading";
+import ContactForm, { ContactFormData } from "../components/ContactForm";
+import { FooterData } from "../components/Footer";
+import LayoutWithHero from "../components/LayoutWithHero";
 
 import content from "../content/content.json";
+import { useLanguage } from "../hooks/useLanguage";
 
-interface LocalizedContent {
-  Navbar: NavbarData;
-  Heading: HeadingData;
+export interface LocalizedContent {
+  navbar: NavbarData;
+  heading: HeadingData;
   contactForm: ContactFormData;
-  Footer: FooterData;
+  footer: FooterData;
 }
 
 const Contact: FunctionComponent = () => {
-  const router = useRouter();
-  const lang =
-    router.query.state && router.isReady
-      ? (router.query.state as Language)
-      : "DE";
-  const [language, setLanguage] = useState<Language>(lang);
+  const [language, setLanguage] = useLanguage();
   const localizedContent: LocalizedContent = content[language];
   return (
-    <div>
-      <Navbar
-        {...localizedContent["Navbar"]}
-        setLanguage={setLanguage}
-        language={language}
-      />
-      <Hero language={language} />
-      <div className={"container-sm"}>
-        <div id="Heading">
-          <Heading {...localizedContent["Heading"]} />
-        </div>
-        <ContactForm {...localizedContent["contactForm"]} language={language} />
-      </div>
-      <Footer {...localizedContent["Footer"]} language={language} />
-    </div>
+    <LayoutWithHero
+      content={localizedContent}
+      language={language}
+      setLanguage={setLanguage}
+    >
+      <ContactForm {...localizedContent.contactForm} language={language} />
+    </LayoutWithHero>
   );
 };
 

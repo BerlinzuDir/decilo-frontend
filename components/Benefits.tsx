@@ -55,15 +55,9 @@ const renderBenefit = ({ heading, text, iconSource }: BenefitProps) => {
 
 const Benefits: FunctionComponent<BenefitsData> = ({ heading, benefits }) => {
   return (
-    <div className="container-fluid pt-5 ps-3">
-      <div className="row">
-        <div className="col-sm-1"></div>
-        <div className="col align-self-center">
-          <h5 className="m-0 text-dark fw-bold">{heading}</h5>
-          <div className={"row"}>{R.map(renderBenefit, benefits)}</div>
-        </div>
-        <div className="col-lg-1"></div>
-      </div>
+    <div className="col pt-5 align-self-center">
+      <h5 className="m-0 text-dark fw-bold">{heading}</h5>
+      <div className={"row"}>{R.map(renderBenefit, benefits)}</div>
     </div>
   );
 };

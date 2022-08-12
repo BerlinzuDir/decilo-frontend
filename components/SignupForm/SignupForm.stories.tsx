@@ -1,11 +1,11 @@
 import React from "react";
 
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import SignupForm from "./SignupForm";
+import SignupForm from "./index";
 
 export default {
-  title: "SignupForm",
+  title: "Index",
   component: SignupForm,
 } as ComponentMeta<typeof SignupForm>;
 

@@ -1,4 +1,4 @@
-import { encode } from "./ContactForm";
+import { encode } from "./index";
 import { assert } from "chai";
 
 describe("encode", () => {

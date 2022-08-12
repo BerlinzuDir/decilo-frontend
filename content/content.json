@@ -1,20 +1,20 @@
 {
   "DE": {
-    "Navbar": {
+    "navbar": {
       "buttonDE": "DE",
       "buttonEN": "EN",
       "contactButton": "Kontakt"
     },
-    "Heading": {
+    "heading": {
       "heading": "DeCiLo - Decentralized City Logistics",
       "subHeading": "making the last mile efficient"
     },
-    "Abstract": {
+    "abstract": {
       "abstractText": "Die DeCiLo Plattform verbindet Logistikdienstleister der letzten Meile zu einem synergistischen Netzwerkund reduziert damit die Betriebskosten aller teilnehmenden Partner."
     },
-    "FAQ": {
+    "faq": {
       "header": "Erste Antworten",
-      "FAQs": [
+      "faqs": [
         {
           "question": "Wie kann ich mich beteiligen?",
           "answer": "blabl ablablab lablabl ablabla blablab lablab lablabla blabl ablabla blabla blablabl ablablabla"
@@ -25,12 +25,44 @@
         }
       ]
     },
-    "Contact": {
+    "contact": {
       "textFields": [
         "Möchten sie Mehr Informationen zur decilo Plattform?",
         "Wir beantworten gerne ihre Fragen."
       ],
       "button": "Kontakt Aufnehmen"
+    },
+    "signupForm": {
+      "header": "Sign up",
+      "fieldDescriptions": {
+        "firstName": {
+          "name": "First Name*",
+          "label": "First Name",
+          "required": true
+        },
+        "lastName": {
+          "name": "Last Name*",
+          "label": "Last Name",
+          "required": true
+        },
+        "email": {
+          "name": "Email*",
+          "label": "Email",
+          "required": true,
+          "invalidMsg": "Invalid email"
+        },
+        "password": {
+          "name": "Password*",
+          "label": "Password",
+          "required": true
+        },
+        "acceptTerms": {
+          "name": "I have read and accept the terms and conditions",
+          "label": "I have read and accept the terms and conditions",
+          "invalidMsg": "You have to accept the terms and conditions",
+          "required": true
+        }
+      }
     },
     "contactForm": {
       "header": "Kontaktformular",
@@ -71,7 +103,7 @@
         "text": "Wir melden uns in kürze."
       }
     },
-    "Footer": {
+    "footer": {
       "header": "Allgemeine Informationen",
       "imprintLinkText": "Impressum",
       "disclaimerLinkText": "Datenschutz",
@@ -82,7 +114,7 @@
       "instagramLink": "https://www.instagram.com/decilo",
       "facebookLink": "https://www.facebook.com/decilo"
     },
-    "Benefits": {
+    "benefits": {
       "heading": "DIE VORTEILE DER DECILO PLATTFORM",
       "benefits": [
         {
@@ -107,7 +139,7 @@
         }
       ]
     },
-    "Imprint": {
+    "imprint": {
       "header": "Impressum",
       "address": {
         "company": "DeCiLo UG (haftungsbeschränkt)",
@@ -135,21 +167,21 @@
     }
   },
   "EN": {
-    "Navbar": {
+    "navbar": {
       "buttonDE": "DE",
       "buttonEN": "EN",
       "contactButton": "Contact"
     },
-    "Heading": {
+    "heading": {
       "heading": "DeCiLo - Decentralized City Logistics",
       "subHeading": "making the last mile efficient"
     },
-    "Abstract": {
+    "abstract": {
       "abstractText": "The DeCiLo platform connects last-mile logistics providers into a synergistic network, reducing operating costs for all participating partners."
     },
-    "FAQ": {
+    "faq": {
       "header": "Erste Antworten",
-      "FAQs": [
+      "faqs": [
         {
           "question": "How to collaborate?",
           "answer": "blabl ablablab lablabl ablabla blablab lablab lablabla blabl ablabla blabla blablabl ablablabla"
@@ -160,12 +192,44 @@
         }
       ]
     },
-    "Contact": {
+    "contact": {
       "textFields": [
         "Would you like more information about the decilo platform?",
         "We will be happy to answer your questions."
       ],
       "button": "Get in Touch"
+    },
+    "signupForm": {
+      "header": "Sign up",
+      "fieldDescriptions": {
+        "firstName": {
+          "name": "First Name*",
+          "label": "First Name",
+          "required": true
+        },
+        "lastName": {
+          "name": "Last Name*",
+          "label": "Last Name",
+          "required": true
+        },
+        "email": {
+          "name": "Email*",
+          "label": "Email",
+          "required": true,
+          "invalidMsg": "Invalid email"
+        },
+        "password": {
+          "name": "Password*",
+          "label": "Password",
+          "required": true
+        },
+        "acceptTerms": {
+          "name": "I have read and accept the terms and conditions",
+          "label": "I have read and accept the terms and conditions",
+          "invalidMsg": "You have to accept the terms and conditions",
+          "required": true
+        }
+      }
     },
     "contactForm": {
       "header": "Contact Form",
@@ -206,7 +270,7 @@
         "text": "We will get back to you soon."
       }
     },
-    "Footer": {
+    "footer": {
       "header": "General Information",
       "imprintLinkText": "Imprint",
       "disclaimerLinkText": "Disclaimer",
@@ -217,7 +281,7 @@
       "instagramLink": "https://www.instagram.com/decilo",
       "facebookLink": "https://www.facebook.com/decilo"
     },
-    "Benefits": {
+    "benefits": {
       "heading": "BENEFITS OF THE DECILO PLATFORM",
       "benefits": [
         {
@@ -242,7 +306,7 @@
         }
       ]
     },
-    "Imprint": {
+    "imprint": {
       "header": "Imprint",
       "address": {
         "company": "DeCiLo UG (haftungsbeschränkt)",

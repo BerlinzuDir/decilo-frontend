@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import logo from "../public/images/logo_weiß_vertikal.png";
 import fancyObject from "../public/images/fancy_object.png";
 
-import { Language } from "../pages/index";
+import { Language } from "../hooks/useLanguage";
 
 interface HeroProps {
   language: Language;

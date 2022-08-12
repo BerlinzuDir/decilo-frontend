@@ -2,7 +2,7 @@ import React, { FunctionComponent, SyntheticEvent } from "react";
 import { useRouter } from "next/router";
 import Login from "./Login";
 
-import { Language } from "../pages";
+import { Language } from "../hooks/useLanguage";
 
 export interface NavbarData {
   buttonDE: string;

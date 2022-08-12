@@ -1,4 +1,4 @@
-import React, { useState, FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 import { useRouter } from "next/router";
 
 import Navbar, { NavbarData } from "../components/Navbar";
@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 import Footer, { FooterData } from "../components/Footer";
 
 import content from "../content/content.json";
-import { Language } from "./index";
+import { Language } from "../hooks/useLanguage";
 
 type SuccessPageContent = Record<string, string>;
 

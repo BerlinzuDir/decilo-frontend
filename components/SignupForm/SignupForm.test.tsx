@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import SignupForm from "./SignupForm";
+import SignupForm from "./index";
 
-describe("SignupForm", () => {
+describe("Index", () => {
   it("should render a form with the required fields", () => {
     const wrapper = shallow(<SignupForm {...signupFormProps} />);
     expect(wrapper.find("form")).toHaveLength(1);
@@ -67,9 +67,11 @@ describe("SignupForm", () => {
   });
 });
 
+describe("useLanguageHook", () => {});
+
 const signupFormProps = {
   header: "Sign Up",
-  formDescription: {
+  fieldDescriptions: {
     email: {
       name: "email",
       label: "Email",

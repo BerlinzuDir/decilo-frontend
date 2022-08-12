@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from "react";
 import Link from "next/link";
-import { Instagram, Facebook, Linkedin, Github } from "react-bootstrap-icons";
+import { Github } from "react-bootstrap-icons";
 
-import { Language } from "../pages/index";
+import { Language } from "../hooks/useLanguage";
 
 export interface FooterData {
   header: string;
